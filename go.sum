@@ -762,6 +762,8 @@ github.com/qor/qor v0.0.0-20180518090926-f171bc73933e/go.mod h1:oG+LgDEnsI9avcFF
 github.com/rainycape/unidecode v0.0.0-20150907023854-cb7f23ec59be/go.mod h1:MIDFMn7db1kT65GmV94GzpX9Qdi7N/pQlwb+AN8wh+Q=
 github.com/rawlingsj/helmboot v0.0.0-20200211183225-25943430ad99 h1:TJULlTRQcmxW2OXG8pzNRMwJE9D3OLPLi9Okgyrv2Nw=
 github.com/rawlingsj/helmboot v0.0.0-20200211183225-25943430ad99/go.mod h1:5njU+XnK+g5zAVJepajCvr+BpASalRtonCYjnu59svw=
+github.com/rawlingsj/helmboot v0.0.0-20200214125108-748f56a3fcb9 h1:KMaId0fONwJtGNCHJ4aEZijmqc+rvQk7fy9x0DmwZ1E=
+github.com/rawlingsj/helmboot v0.0.0-20200214125108-748f56a3fcb9/go.mod h1:UUqDf4cHd9pbWlpTQ60BM4SrQFrzwLJL1XmeNHwfXEc=
 github.com/remyoudompheng/bigfft v0.0.0-20170806203942-52369c62f446/go.mod h1:uYEyJGbgTkfkS4+E/PavXkNJcbFIpEtjt2B0KDQ5+9M=
 github.com/rickar/props v0.0.0-20170718221555-0b06aeb2f037 h1:HFsTO5S+nnw/Xs9lRYF+UUJvH8wMSRMRal321W0hfdY=
 github.com/rickar/props v0.0.0-20170718221555-0b06aeb2f037/go.mod h1:F1p8BNM4IXv2UcptwSp8HJOapKurodd/PYu1D6Gtn9Y=

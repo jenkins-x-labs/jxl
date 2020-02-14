@@ -2,7 +2,7 @@ package root
 
 import (
 	"fmt"
-	"github.com/jenkins-x-labs/jx-experiments/cmd/helmboot"
+	"github.com/jstrachan/helmboot/pkg/cmd"
 	"github.com/spf13/cobra"
 	"os"
 )
@@ -31,5 +31,5 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.AddCommand(helmboot.Helmboot)
+	rootCmd.AddCommand(cmd.HelmBoot())
 }

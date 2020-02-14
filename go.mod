@@ -25,7 +25,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.13.0 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/jenkins-x/jx v0.0.0-20200205060623-f7c50978003a
-	github.com/jstrachan/helmboot v0.0.0-00010101000000-000000000000
+	github.com/jstrachan/helmboot v0.0.0-20200214120703-16a902578e5f
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
 	github.com/kr/pretty v0.2.0 // indirect
 	github.com/kr/pty v1.1.8 // indirect
@@ -66,7 +66,7 @@ require (
 
 replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
 
-replace github.com/jstrachan/helmboot => github.com/rawlingsj/helmboot v0.0.0-20200211183225-25943430ad99
+replace github.com/jstrachan/helmboot => github.com/rawlingsj/helmboot v0.0.0-20200214125108-748f56a3fcb9
 
 replace k8s.io/api => k8s.io/api v0.0.0-20190528110122-9ad12a4af326
 
