@@ -1,4 +1,4 @@
-module github.com/jenkins-x-labs/jx-experiments
+module github.com/jenkins-x-labs/jx-alpha
 
 go 1.12
 

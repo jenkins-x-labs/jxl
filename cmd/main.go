@@ -1,10 +1,7 @@
 package main
 
 import (
-//"os"
-// exp "github.com/jenkins-x-labs/jx-experiments/cmd/experiments/app"
-
-	"github.com/jenkins-x-labs/jx-experiments/cmd/root"
+	"github.com/jenkins-x-labs/jx-alpha/cmd/root"
 )
 
 // Entrypoint for the command
