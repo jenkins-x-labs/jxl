@@ -24,8 +24,9 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.13.0 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
-	github.com/jenkins-x/jx v0.0.0-20200205060623-f7c50978003a
-	github.com/jstrachan/helmboot v0.0.0-20200214175546-b0ff56cb91e4
+	github.com/jenkins-x-labs/helmboot v0.0.0-20200219112558-25dd7ac1e8f6
+	github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62
+	github.com/jenkins-x/jx v0.0.0-20200207164408-3e719ca49349
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
 	github.com/kr/pretty v0.2.0 // indirect
 	github.com/kr/pty v1.1.8 // indirect
