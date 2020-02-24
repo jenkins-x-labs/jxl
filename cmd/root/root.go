@@ -2,12 +2,14 @@ package root
 
 import (
 	"fmt"
+	"os"
+
 	"github.com/jenkins-x/jx/pkg/cmd/clients"
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
-	"os"
 
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd"
 	"github.com/jenkins-x-labs/jwizard/pkg/cmd/create"
+	token "github.com/jenkins-x-labs/step-parse-git-credentials-token/cmd/root"
 	"github.com/spf13/cobra"
 )
 
@@ -36,4 +38,5 @@ func init() {
 
 	rootCmd.AddCommand(create.NewCmdCreateProject(commonOptions))
 	rootCmd.AddCommand(cmd.HelmBoot())
+	rootCmd.AddCommand(token.NewCmdStepGetGitCredentialToken())
 }

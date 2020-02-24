@@ -539,8 +539,12 @@ github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nI
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
 github.com/jenkins-x-labs/helmboot v0.0.0-20200219112558-25dd7ac1e8f6 h1:fAOVHgAzNJW9iBauOEUAlYSU2CNTDscvnTyE7V2vpNw=
 github.com/jenkins-x-labs/helmboot v0.0.0-20200219112558-25dd7ac1e8f6/go.mod h1:v8lBn6ssplicXcph3iQeSVb3JVLdy8T4x/D01IkKju8=
+github.com/jenkins-x-labs/helmboot v0.0.0-20200220161726-90407953d105 h1:JQ1CEfKJNHuWPBUUgai9sVCz6xj0FB2BBbQdjaTLi6s=
+github.com/jenkins-x-labs/helmboot v0.0.0-20200220161726-90407953d105/go.mod h1:7fbolzMaDcFQkT1OPk/HUUfznUtvT3j6oAkqHY4dmJo=
 github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62 h1:JmKy0gs3SJsJgOvxuwzXZHNeZLj8f7l4u4mlk5f1AAA=
 github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62/go.mod h1:YYO9dV2sumhTXTI8+EU9qlVGKz2tpHVUfQXRLh2MQjE=
+github.com/jenkins-x-labs/step-parse-git-credentials-token v0.0.0-20200220174420-86b533059751 h1:tj03OK+jqcB+t1Ov5EgXk6UfRLn83Xnc5aTStL83NDQ=
+github.com/jenkins-x-labs/step-parse-git-credentials-token v0.0.0-20200220174420-86b533059751/go.mod h1:bEPRHq9kFgOJ0Nqdkp/g6I3GA7QHN5Fg6hLAcH7jGCY=
 github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200219045331-5bd571469fb0 h1:8XULtwPP1yfM+eXBZfWp1LRIh05g0LRdtSNHQIP+SNo=
 github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200219045331-5bd571469fb0/go.mod h1:rADR2fHDsSRSQzq9p9rpVzS03JGgu7n6wP2zoscIOGs=
 github.com/jenkins-x/draft-repo v0.0.0-20180417100212-2f66cc518135 h1:3zy/Nvdi9V95Jfu6+W4NAJrHDeypB58FSLyzI3XfO/4=
