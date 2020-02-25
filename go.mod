@@ -3,10 +3,11 @@ module github.com/jenkins-x-labs/jx-labs
 go 1.12
 
 require (
-	github.com/jenkins-x-labs/helmboot v0.0.10
-	github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62
-	github.com/jenkins-x-labs/step-go-releaser v0.0.9
+	github.com/jenkins-x-labs/helmboot v0.0.14
+	github.com/jenkins-x-labs/jwizard v0.0.0-20200221170922-4bf4d1457f90
+	github.com/jenkins-x-labs/step-go-releaser v0.0.10
 	github.com/jenkins-x-labs/step-parse-git-credentials-token v0.0.0-20200220174420-86b533059751
+	github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200225084305-618c6ee0e0a4
 	github.com/jenkins-x/jx v0.0.0-20200207164408-3e719ca49349
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/spf13/cobra v0.0.5

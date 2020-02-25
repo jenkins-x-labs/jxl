@@ -11,6 +11,7 @@ import (
 	"github.com/jenkins-x-labs/jwizard/pkg/cmd/create"
 	token "github.com/jenkins-x-labs/step-parse-git-credentials-token/cmd/root"
 	goreleaser "github.com/jenkins-x-labs/step-go-releaser/pkg"
+	tp "github.com/jenkins-x-labs/trigger-pipeline/pkg/cmd"
 	"github.com/spf13/cobra"
 )
 
@@ -38,7 +39,9 @@ func init() {
 	commonOptions := opts.NewCommonOptionsWithTerm(f, os.Stdin, os.Stdout, os.Stderr)
 
 	rootCmd.AddCommand(create.NewCmdCreateProject(commonOptions))
-	rootCmd.AddCommand(cmd.HelmBoot())
+	rootCmd.AddCommand(cmd.Main())
 	rootCmd.AddCommand(token.NewCmdStepGetGitCredentialToken())
 	rootCmd.AddCommand(goreleaser.NewCmdGoReleaser())
+	rootCmd.AddCommand(tp.NewCmd())
+
 }
