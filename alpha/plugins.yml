@@ -1,0 +1,14 @@
+- binaries:
+    - url: https://github.com/jenkins-x-labs/helmboot/releases/download/v$VERSION/helmboot-darwin-amd64.tar.gz
+      goarch: amd64
+      goos: darwin
+    - url: https://github.com/jenkins-x-labs/helmboot/releases/download/v$VERSION/helmboot-linux-amd64.tar.gz
+      goarch: amd64
+      goos: linux
+    - url: https://github.com/jenkins-x-labs/helmboot/releases/download/v$VERSION/helmboot-windows-amd64.zip
+      goarch: amd64
+      goos: windows
+  name: helmboot
+  version: 0.0.12
+  subCommand: boot
+  description: "commands for booting up a Jenkins X cluster via GitOps"
