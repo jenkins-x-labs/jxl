@@ -543,10 +543,14 @@ github.com/jenkins-x-labs/helmboot v0.0.0-20200220161726-90407953d105 h1:JQ1CEfK
 github.com/jenkins-x-labs/helmboot v0.0.0-20200220161726-90407953d105/go.mod h1:7fbolzMaDcFQkT1OPk/HUUfznUtvT3j6oAkqHY4dmJo=
 github.com/jenkins-x-labs/helmboot v0.0.0-20200225102046-31e8c678e067 h1:oi+QkzDPycZtUsns6oZHChztdrx0w2jRAgXg1n975F8=
 github.com/jenkins-x-labs/helmboot v0.0.0-20200225102046-31e8c678e067/go.mod h1:kEqj0rVRMma4DBXTA0yfYSZaMd1+kglsj0kl1CqTD9Q=
+github.com/jenkins-x-labs/helmboot v0.0.3 h1:FUDZcamRRxuffyBZQV4sYjc6R1zNyrGZPplQ1nn01eU=
+github.com/jenkins-x-labs/helmboot v0.0.3/go.mod h1:kEqj0rVRMma4DBXTA0yfYSZaMd1+kglsj0kl1CqTD9Q=
 github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62 h1:JmKy0gs3SJsJgOvxuwzXZHNeZLj8f7l4u4mlk5f1AAA=
 github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62/go.mod h1:YYO9dV2sumhTXTI8+EU9qlVGKz2tpHVUfQXRLh2MQjE=
 github.com/jenkins-x-labs/step-go-releaser v0.0.3 h1:RwfQdVURCw1Yi7tiBN3e0QMyv/B3ZBlaMQbDfrGe23Q=
 github.com/jenkins-x-labs/step-go-releaser v0.0.3/go.mod h1:vy63IJDVB5L6b4JukGveuiu8sneQFyESGGRTO1QR0cI=
+github.com/jenkins-x-labs/step-go-releaser v0.0.9 h1:YjpM2bY5Xn/xYFaFuapnRNcnU6oDjCUuI2je0RKKo1E=
+github.com/jenkins-x-labs/step-go-releaser v0.0.9/go.mod h1:vy63IJDVB5L6b4JukGveuiu8sneQFyESGGRTO1QR0cI=
 github.com/jenkins-x-labs/step-parse-git-credentials-token v0.0.0-20200220174420-86b533059751 h1:tj03OK+jqcB+t1Ov5EgXk6UfRLn83Xnc5aTStL83NDQ=
 github.com/jenkins-x-labs/step-parse-git-credentials-token v0.0.0-20200220174420-86b533059751/go.mod h1:bEPRHq9kFgOJ0Nqdkp/g6I3GA7QHN5Fg6hLAcH7jGCY=
 github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200219045331-5bd571469fb0 h1:8XULtwPP1yfM+eXBZfWp1LRIh05g0LRdtSNHQIP+SNo=
