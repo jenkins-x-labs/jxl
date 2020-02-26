@@ -557,6 +557,8 @@ github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62 h1:JmKy0gs3
 github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62/go.mod h1:YYO9dV2sumhTXTI8+EU9qlVGKz2tpHVUfQXRLh2MQjE=
 github.com/jenkins-x-labs/jwizard v0.0.0-20200221170922-4bf4d1457f90 h1:J7DO3sSOfr4WSEtjFAuY97YVhtQiv0NguBW/CUSQvv4=
 github.com/jenkins-x-labs/jwizard v0.0.0-20200221170922-4bf4d1457f90/go.mod h1:gmAX/yv450PyT6lxDcSFl9hV3AgFrnnPVAlPW5Lvdrw=
+github.com/jenkins-x-labs/jwizard v0.0.3 h1:dEtrchfGBDBE+pkmTvd4tk33OBtrjIYTI6NVLOBGgSc=
+github.com/jenkins-x-labs/jwizard v0.0.3/go.mod h1:gmAX/yv450PyT6lxDcSFl9hV3AgFrnnPVAlPW5Lvdrw=
 github.com/jenkins-x-labs/step-go-releaser v0.0.3 h1:RwfQdVURCw1Yi7tiBN3e0QMyv/B3ZBlaMQbDfrGe23Q=
 github.com/jenkins-x-labs/step-go-releaser v0.0.3/go.mod h1:vy63IJDVB5L6b4JukGveuiu8sneQFyESGGRTO1QR0cI=
 github.com/jenkins-x-labs/step-go-releaser v0.0.9 h1:YjpM2bY5Xn/xYFaFuapnRNcnU6oDjCUuI2je0RKKo1E=
