@@ -9,5 +9,5 @@ dependencies:
   owner: jenkins-x-labs
   repo: jwizard
   url: https://github.com/jenkins-x-labs/jwizard
-  version: 0.0.4
-  versionURL: https://github.com/jenkins-x-labs/jwizard/releases/tag/v0.0.4
+  version: 0.0.6
+  versionURL: https://github.com/jenkins-x-labs/jwizard/releases/tag/v0.0.6
