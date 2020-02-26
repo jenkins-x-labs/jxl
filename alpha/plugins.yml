@@ -12,3 +12,33 @@
   version: 0.0.12
   subCommand: boot
   description: "commands for booting up a Jenkins X cluster via GitOps"
+- binaries:
+    - url: https://github.com/jenkins-x-labs/trigger-pipeline/releases/download/v$VERSION/trigger-pipeline-darwin-amd64.tar.gz
+      goarch: amd64
+      goos: darwin
+    - url: https://github.com/jenkins-x-labs/trigger-pipeline/releases/download/v$VERSION/trigger-pipeline-linux-amd64.tar.gz
+      goarch: amd64
+      goos: linux
+    - url: https://github.com/jenkins-x-labs/trigger-pipeline/releases/download/v$VERSION/trigger-pipeline-windows-amd64.zip
+      goarch: amd64
+      goos: windows
+  name: tp
+  version: 0.0.2
+  subCommand: jenkins
+  description: "commands for triggering pipelines in remote Jenkins servers"
+- binaries:
+    - url: https://github.com/jenkins-x-labs/jwizard/releases/download/v$VERSION/jwizard-darwin-amd64.tar.gz
+      goarch: amd64
+      goos: darwin
+    - url: https://github.com/jenkins-x-labs/jwizard/releases/download/v$VERSION/jwizard-linux-amd64.tar.gz
+      goarch: amd64
+      goos: linux
+    - url: https://github.com/jenkins-x-labs/jwizard/releases/download/v$VERSION/jwizard-windows-amd64.zip
+      goarch: amd64
+      goos: windows
+  name: jwizard
+  version: 0.0.2
+  subCommand: project
+  description: "commands for creating quickstarts and importing projects"
+
+

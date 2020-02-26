@@ -8,9 +8,10 @@ import (
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
 
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd"
+	"github.com/jenkins-x-labs/helmboot/pkg/common"
 	"github.com/jenkins-x-labs/jwizard/pkg/cmd/create"
-	token "github.com/jenkins-x-labs/step-parse-git-credentials-token/cmd/root"
 	goreleaser "github.com/jenkins-x-labs/step-go-releaser/pkg"
+	token "github.com/jenkins-x-labs/step-parse-git-credentials-token/cmd/root"
 	tp "github.com/jenkins-x-labs/trigger-pipeline/pkg/cmd"
 	"github.com/spf13/cobra"
 )
@@ -35,6 +36,9 @@ func Execute() {
 }
 
 func init() {
+	common.TopLevelCommand = "boot"
+	common.BinaryName = "jxl boot"
+
 	f := clients.NewFactory()
 	commonOptions := opts.NewCommonOptionsWithTerm(f, os.Stdin, os.Stdout, os.Stderr)
 
