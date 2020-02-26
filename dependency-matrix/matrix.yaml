@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/jenkins-x-labs/helmboot
   version: 0.0.15
   versionURL: https://github.com/jenkins-x-labs/helmboot/releases/tag/v0.0.15
+- host: github.com
+  owner: jenkins-x-labs
+  repo: jwizard
+  url: https://github.com/jenkins-x-labs/jwizard
+  version: 0.0.3
+  versionURL: https://github.com/jenkins-x-labs/jwizard/releases/tag/v0.0.3
