@@ -157,7 +157,6 @@ importfmt: get-fmt-deps
 lint: ## Lint the code
 	./hack/gofmt.sh
 	./hack/linter.sh
-	./hack/generate.sh
 
 .PHONY: all
 all: fmt build lint test

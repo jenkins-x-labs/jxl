@@ -18,6 +18,9 @@ export GO111MODULE=on
 golangci-lint run \
 	--no-config \
   --disable-all \
+  -E golint \
+  -E varcheck \
+  -E errcheck \
 	-E misspell \
 	-E unconvert \
   -E deadcode \
@@ -27,20 +30,17 @@ golangci-lint run \
   -E goimports \
   -E structcheck \
   -E interfacer \
+  -E govet \
+  -E unparam \
+  -E megacheck \
+  -E goconst \
+  -E ineffassign \
+  -E unparam \
+  -E gocritic \
+  -E maligned \
   -E typecheck \
   --skip-dirs vendor \
   --deadline 15m0s \
   --verbose \
   --build-tags build
 
-# -E errcheck \
-# -E varcheck \
-# -E govet \
-# -E unparam \
-# -E megacheck \
-# -E goconst \
-# -E ineffassign \
-# -E golint
-# -E unparam
-# -E gocritic
-# -E maligned
