@@ -3,7 +3,7 @@ module github.com/jenkins-x-labs/jx-labs
 go 1.12
 
 require (
-	github.com/jenkins-x-labs/helmboot v0.0.14
+	github.com/jenkins-x-labs/helmboot v0.0.15
 	github.com/jenkins-x-labs/jwizard v0.0.0-20200221170922-4bf4d1457f90
 	github.com/jenkins-x-labs/step-go-releaser v0.0.10
 	github.com/jenkins-x-labs/step-parse-git-credentials-token v0.0.0-20200220174420-86b533059751
