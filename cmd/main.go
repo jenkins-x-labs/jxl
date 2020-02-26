@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/jenkins-x-labs/jx-labs/cmd/root"
+	"github.com/jenkins-x-labs/jxl/cmd/root"
 )
 
 // Entrypoint for the command
