@@ -11,3 +11,9 @@ dependencies:
   url: https://github.com/jenkins-x-labs/jwizard
   version: 0.0.7
   versionURL: https://github.com/jenkins-x-labs/jwizard/releases/tag/v0.0.7
+- host: github.com
+  owner: jenkins-x-labs
+  repo: step-go-releaser
+  url: https://github.com/jenkins-x-labs/step-go-releaser
+  version: 0.0.11
+  versionURL: https://github.com/jenkins-x-labs/step-go-releaser/releases/tag/v0.0.11
