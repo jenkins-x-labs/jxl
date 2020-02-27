@@ -496,6 +496,8 @@ github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62 h1:JmKy0gs3
 github.com/jenkins-x-labs/jwizard v0.0.0-20200219080758-8315fbed0d62/go.mod h1:YYO9dV2sumhTXTI8+EU9qlVGKz2tpHVUfQXRLh2MQjE=
 github.com/jenkins-x-labs/jwizard v0.0.7 h1:o3O6Y07+4Yzy+owtks8E4OYtuSKEet8kydIh5zcLPhQ=
 github.com/jenkins-x-labs/jwizard v0.0.7/go.mod h1:SRRAwdskLTQIK5u9xnrTn2PKj5WXUJOLIf8DMkwA6Tw=
+github.com/jenkins-x-labs/jwizard v0.0.9 h1:DF394lNNtWLtC3wmokghlCggRLpISTxOlOjCnpk3Cl8=
+github.com/jenkins-x-labs/jwizard v0.0.9/go.mod h1:SRRAwdskLTQIK5u9xnrTn2PKj5WXUJOLIf8DMkwA6Tw=
 github.com/jenkins-x-labs/step-go-releaser v0.0.10 h1:ViO6u1Y0y8v96gZ8vXdAt/Nee4pnlSboPTP14bqYT44=
 github.com/jenkins-x-labs/step-go-releaser v0.0.10/go.mod h1:vy63IJDVB5L6b4JukGveuiu8sneQFyESGGRTO1QR0cI=
 github.com/jenkins-x-labs/step-parse-git-credentials-token v0.0.0-20200220174420-86b533059751 h1:tj03OK+jqcB+t1Ov5EgXk6UfRLn83Xnc5aTStL83NDQ=
