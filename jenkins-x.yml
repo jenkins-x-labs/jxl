@@ -1,1 +1,10 @@
 buildPack: go-cli
+pipelineConfig:
+  pipelines:
+    release:
+      promote:
+        steps:
+        - command: ./promote.sh
+          dir: /workspace/source
+          name: promote-release
+          image: gcr.io/jenkinsxio/builder-go
