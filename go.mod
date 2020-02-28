@@ -37,3 +37,5 @@ replace github.com/Azure/go-autorest => github.com/Azure/go-autorest v10.14.0+in
 replace github.com/banzaicloud/bank-vaults => github.com/banzaicloud/bank-vaults v0.0.0-20190508130850-5673d28c46bd
 
 replace github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
+
+replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200227063938-2e166962cf26
