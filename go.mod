@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/jenkins-x-labs/helmboot v0.0.31
+	github.com/jenkins-x-labs/helmboot v0.0.33
 	github.com/jenkins-x-labs/jwizard v0.0.9
 	github.com/jenkins-x-labs/step-go-releaser v0.0.11
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200225084305-618c6ee0e0a4
@@ -37,3 +37,5 @@ replace github.com/Azure/go-autorest => github.com/Azure/go-autorest v10.14.0+in
 replace github.com/banzaicloud/bank-vaults => github.com/banzaicloud/bank-vaults v0.0.0-20190508130850-5673d28c46bd
 
 replace github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
+
+replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200227063938-2e166962cf26
