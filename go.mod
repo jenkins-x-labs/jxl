@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/jenkins-x-labs/helmboot v0.0.35
+	github.com/jenkins-x-labs/helmboot v0.0.33
 	github.com/jenkins-x-labs/jwizard v0.0.9
 	github.com/jenkins-x-labs/step-go-releaser v0.0.11
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200225084305-618c6ee0e0a4
