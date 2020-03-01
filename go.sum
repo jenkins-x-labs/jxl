@@ -398,6 +398,8 @@ github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nI
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
 github.com/jenkins-x-labs/helmboot v0.0.34 h1:cePlFwuihtDLT0Wfi2k1FJbqu/o/9+J/Z1UUZo9d3TE=
 github.com/jenkins-x-labs/helmboot v0.0.34/go.mod h1:jpt3u9V0tpOc3k0v7TmrINn1527m22jfmBzCoW52K2U=
+github.com/jenkins-x-labs/helmboot v0.0.35 h1:x220a5yaEZaIWzd33CH3FR2GgU9uTqUYIMtKv0zyh/0=
+github.com/jenkins-x-labs/helmboot v0.0.35/go.mod h1:aFmIslY2k4iPcCyv0MCGvzezRuUrU+AWDUDSzhNArjw=
 github.com/jenkins-x-labs/jwizard v0.0.9 h1:DF394lNNtWLtC3wmokghlCggRLpISTxOlOjCnpk3Cl8=
 github.com/jenkins-x-labs/jwizard v0.0.9/go.mod h1:SRRAwdskLTQIK5u9xnrTn2PKj5WXUJOLIf8DMkwA6Tw=
 github.com/jenkins-x-labs/jwizard v0.0.11 h1:3IH/qiwmYCLY4vJr2f91RHmNlJZh2E/UUyjPNTPHkIA=
