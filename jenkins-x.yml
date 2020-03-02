@@ -4,17 +4,6 @@ pipelineConfig:
   pipelines:
     overrides:
       - name: container-build
-        volumes:
-        - name: gcp-sa
-          secret:
-            secretName: gcp-sa
-        containerOptions:
-          env:
-          - name: GCP_SA
-            value: /secrets/gcp-sa.json
-          volumeMounts:
-          - mountPath: /secrets
-            name: gcp-sa
         step:
           sh: ./build.sh
     release:
