@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/jenkinsxio-labs/jxl:$VERISON', '.' ]
+timeout: 3600s
+options:
+  machineType: 'N1_HIGHCPU_8'
+images:
+- 'gcr.io/jenkinsxio-labs/jxl:$VERISON'

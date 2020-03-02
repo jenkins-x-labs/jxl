@@ -2,6 +2,10 @@ buildPack: go-cli
 dockerRegistryOwner: jenkinsxio-labs
 pipelineConfig:
   pipelines:
+    overrides:
+      - name: container-build
+        step:
+          sh: ./build.sh
     release:
       promote:
         steps:
