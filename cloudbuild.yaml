@@ -1,0 +1,13 @@
+steps:
+- name: 'golang:1.12.17'
+  args: ['make', 'linux']
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/jenkinsxio-labs/jxl:${_VERSION}', '.' ]
+substitutions:
+  _VERSION: 0.0.1
+timeout: 3600s
+options:
+  machineType: 'N1_HIGHCPU_8'
+logsBucket: gs://labs-cloudbuild-logs
+images:
+- 'gcr.io/jenkinsxio-labs/jxl:${_VERSION}'

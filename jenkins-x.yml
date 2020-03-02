@@ -2,10 +2,28 @@ buildPack: go-cli
 dockerRegistryOwner: jenkinsxio-labs
 pipelineConfig:
   pipelines:
+    overrides:
+      - name: container-build
+        volumes:
+        - name: gcp-sa
+          secret:
+            secretName: gcp-sa
+        containerOptions:
+          env:
+          - name: GCP_SA
+            value: /secrets/gcp-sa.json
+          volumeMounts:
+          - mountPath: /secrets
+            name: gcp-sa
+        step:
+          sh: ./build.sh
     release:
       promote:
         steps:
-        - command: ./promote.sh
-          dir: /workspace/source
-          name: promote-release
-          image: gcr.io/jenkinsxio/builder-go
+          - command: ./promote.sh
+            dir: /workspace/source
+            name: promote-release
+            image: gcr.io/jenkinsxio/builder-go
+
+
+
