@@ -8,5 +8,6 @@ substitutions:
 timeout: 3600s
 options:
   machineType: 'N1_HIGHCPU_8'
+logsBucket: gs://labs-cloudbuild-logs
 images:
 - 'gcr.io/jenkinsxio-labs/jxl:${_VERSION}'
