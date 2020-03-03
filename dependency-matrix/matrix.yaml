@@ -17,3 +17,9 @@ dependencies:
   url: https://github.com/jenkins-x-labs/step-go-releaser
   version: 0.0.11
   versionURL: https://github.com/jenkins-x-labs/step-go-releaser/releases/tag/v0.0.11
+- host: github.com
+  owner: jenkins-x-labs
+  repo: trigger-pipeline
+  url: https://github.com/jenkins-x-labs/trigger-pipeline
+  version: 0.0.3
+  versionURL: https://github.com/jenkins-x-labs/trigger-pipeline/releases/tag/v0.0.3

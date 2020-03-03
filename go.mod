@@ -7,7 +7,7 @@ require (
 	github.com/jenkins-x-labs/helmboot v0.0.38
 	github.com/jenkins-x-labs/jwizard v0.0.9
 	github.com/jenkins-x-labs/step-go-releaser v0.0.11
-	github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200225084305-618c6ee0e0a4
+	github.com/jenkins-x-labs/trigger-pipeline v0.0.3
 	github.com/jenkins-x/jx v0.0.0-20200301132334-7b3b39353a96
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v0.0.5
