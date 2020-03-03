@@ -2,6 +2,7 @@ package step
 
 import (
 	"github.com/jenkins-x-labs/jxl/cmd/root/step/get"
+	goreleaser "github.com/jenkins-x-labs/step-go-releaser/pkg"
 	"github.com/jenkins-x/jx/pkg/cmd/config"
 	"github.com/jenkins-x/jx/pkg/cmd/helper"
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
@@ -32,7 +33,7 @@ func NewCmdStep(commonOpts *opts.CommonOptions) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:     "step",
-		Short:   "pipeline steps",
+		Short:   "Pipeline Steps: these commands are for use inside pipelines and generally not used by developers directly",
 		Aliases: []string{"steps"},
 		Run: func(cmd *cobra.Command, args []string) {
 			options.Cmd = cmd
@@ -74,6 +75,7 @@ func NewCmdStep(commonOpts *opts.CommonOptions) *cobra.Command {
 	cmd.AddCommand(update.NewCmdStepUpdate(commonOpts))
 	cmd.AddCommand(step.NewCmdStepOverrideRequirements(commonOpts))
 	cmd.AddCommand(restore.NewCmdStepRestore(commonOpts))
+	cmd.AddCommand(goreleaser.NewCmdGoReleaser())
 
 	return cmd
 }
