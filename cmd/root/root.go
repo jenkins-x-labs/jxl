@@ -11,9 +11,10 @@ import (
 
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd"
 	"github.com/jenkins-x-labs/helmboot/pkg/common"
+	jwcommon "github.com/jenkins-x-labs/jwizard/pkg/cmd/common"
 	"github.com/jenkins-x-labs/jwizard/pkg/cmd/create"
-	goreleaser "github.com/jenkins-x-labs/step-go-releaser/pkg"
 	tp "github.com/jenkins-x-labs/trigger-pipeline/pkg/cmd"
+	tpcommon "github.com/jenkins-x-labs/trigger-pipeline/pkg/common"
 	"github.com/spf13/cobra"
 )
 
@@ -37,19 +38,26 @@ func Execute() {
 }
 
 func init() {
-	common.TopLevelCommand = "boot"
-	common.BinaryName = "jxl boot"
-
 	f := clients.NewFactory()
 	commonOptions := opts.NewCommonOptionsWithTerm(f, os.Stdin, os.Stdout, os.Stderr)
 
 	// lets default to helm 3
 	commonOptions.SetHelm(helm.NewHelmCLI("helm", helm.V3, "", false))
 
-	rootCmd.AddCommand(create.NewCmdCreateProject(commonOptions))
+	common.TopLevelCommand = "boot"
+	common.BinaryName = "jxl boot"
 	rootCmd.AddCommand(cmd.Main())
-	rootCmd.AddCommand(goreleaser.NewCmdGoReleaser())
-	rootCmd.AddCommand(tp.NewCmd())
+
+	tpcommon.TopLevelCommand = "jenkins"
+	tpcommon.BinaryName = "jxl jenkins"
+
+	jenkinsCmd := tp.NewCmd()
+	jenkinsCmd.Use = "jenkins"
+	rootCmd.AddCommand(jenkinsCmd)
+
+	jwcommon.TopLevelCommand = "project"
+	jwcommon.BinaryName = "jxl project"
+	rootCmd.AddCommand(create.NewCmdCreateProject(commonOptions))
 
 	// lets import the jx commands
 	rootCmd.AddCommand(step.NewCmdStep(commonOptions))
