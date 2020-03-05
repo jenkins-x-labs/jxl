@@ -8,7 +8,7 @@ require (
 	github.com/jenkins-x-labs/jwizard v0.0.13
 	github.com/jenkins-x-labs/step-go-releaser v0.0.12
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
-	github.com/jenkins-x/jx v0.0.0-20200301132334-7b3b39353a96
+	github.com/jenkins-x/jx v0.0.0-20200305083540-7eafabca234c
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v0.0.5
 	github.com/stretchr/testify v1.4.0
@@ -38,4 +38,4 @@ replace github.com/banzaicloud/bank-vaults => github.com/banzaicloud/bank-vaults
 
 replace github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
 
-replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200301132334-7b3b39353a96
+replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200305083540-7eafabca234c
