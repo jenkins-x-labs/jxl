@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/jenkins-x-labs/helmboot/pkg/cmd/verify"
 	"github.com/jenkins-x-labs/jxl/cmd/root/step"
 	"github.com/jenkins-x/jx/pkg/cmd/clients"
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
@@ -47,6 +48,7 @@ func init() {
 	common.TopLevelCommand = "boot"
 	common.BinaryName = "jxl boot"
 	rootCmd.AddCommand(cmd.Main())
+	rootCmd.AddCommand(verify.NewCmdVerify())
 
 	tpcommon.TopLevelCommand = "jenkins"
 	tpcommon.BinaryName = "jxl jenkins"
