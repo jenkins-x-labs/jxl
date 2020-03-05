@@ -1,0 +1,34 @@
+image:
+  tag: 0.0.52
+  repository: gcr.io/jenkinsxio-labs
+boot:
+  clusterName:
+  bootGitURL: https://github.com/jenkins-x/jenkins-x-boot-helmfile-config.git
+  bootGitRef: master
+  environmentGitOwner:
+  userEmail:
+  projectID:
+  publicEnvironmentGit: false
+  publicGit: false
+  provider: gke
+  tls:
+    production: no
+  zone:
+  versionsGitURL: https://github.com/jenkins-x/jenkins-x-versions.git
+  versionsGitRef: master
+
+secrets:
+  helmboot:
+    enabled: true
+  gsm:
+    enabled: false
+  env:
+    enabled: false
+    adminUser:
+      username:
+      password:
+    hmacToken:
+    pipelineUser:
+      username:
+      email:
+      token:
