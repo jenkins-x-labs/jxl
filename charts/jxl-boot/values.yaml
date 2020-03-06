@@ -1,6 +1,6 @@
 image:
-  tag: 0.0.52
-  repository: gcr.io/jenkinsxio-labs
+  tag: 0.0.62
+  repository: gcr.io/cbjx-runnerregal/jxl
 boot:
   clusterName:
   bootGitURL: https://github.com/jenkins-x/jenkins-x-boot-helmfile-config.git
