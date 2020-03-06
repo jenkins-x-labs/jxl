@@ -92,14 +92,14 @@ spec:
           value: {{ .Values.boot.userEmail | quote }}
         - name: JX_HOME
           value: /secrets
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-        imagePullPolicy: IfNotPresent
+        image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: boot
         volumeMounts:
         - mountPath: /secrets/jx-boot
           name: jx-boot-secrets
       restartPolicy: Never
-      serviceAccount: boot-sa
+      serviceAccountName: {{ include "jxl-boot.serviceAccountName" . }}
       volumes:
       - name: jx-boot-secrets
         secret:
