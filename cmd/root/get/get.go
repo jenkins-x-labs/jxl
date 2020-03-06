@@ -16,16 +16,16 @@ import (
 	"github.com/jenkins-x/jx/pkg/util"
 )
 
-// GetOptions is the start of the data required to perform the operation.  As new fields are added, add them here instead of
+// Options is the start of the data required to perform the operation.  As new fields are added, add them here instead of
 // referencing the cmd.Flags()
-type GetOptions struct {
+type Options struct {
 	*opts.CommonOptions
 
 	Output string
 }
 
 const (
-	valid_resources = `Valid resource types include:
+	validResources = `Valid resource types include:
 
     * environments (aka 'env')
     * pipelines (aka 'pipe')
@@ -34,14 +34,14 @@ const (
 )
 
 var (
-	get_long = templates.LongDesc(`
+	getLong = templates.LongDesc(`
 		Display one or more resources.
 
-		` + valid_resources + `
+		` + validResources + `
 
 `)
 
-	get_example = templates.Examples(`
+	getExample = templates.Examples(`
 		# List all pipelines
 		jx get pipeline
 
@@ -53,15 +53,15 @@ var (
 // NewCmdGet creates a command object for the generic "get" action, which
 // retrieves one or more resources from a server.
 func NewCmdGet(commonOpts *opts.CommonOptions) *cobra.Command {
-	options := &GetOptions{
+	options := &Options{
 		CommonOptions: commonOpts,
 	}
 
 	cmd := &cobra.Command{
 		Use:     "get TYPE [flags]",
 		Short:   "Display one or more resources",
-		Long:    get_long,
-		Example: get_example,
+		Long:    getLong,
+		Example: getExample,
 		Run: func(cmd *cobra.Command, args []string) {
 			options.Cmd = cmd
 			options.Args = args
@@ -90,7 +90,7 @@ func NewCmdGet(commonOpts *opts.CommonOptions) *cobra.Command {
 }
 
 // Run implements this command
-func (o *GetOptions) Run() error {
+func (o *Options) Run() error {
 	return o.Cmd.Help()
 }
 
@@ -100,13 +100,13 @@ func outputEmptyListWarning(out io.Writer) error {
 	return err
 }
 
-func (o *GetOptions) AddGetFlags(cmd *cobra.Command) {
+func (o *Options) AddGetFlags(cmd *cobra.Command) {
 	o.Cmd = cmd
 	cmd.Flags().StringVarP(&o.Output, "output", "o", "", "The output format such as 'yaml'")
 }
 
 // renderResult renders the result in a given output format
-func (o *GetOptions) renderResult(value interface{}, format string) error {
+func (o *Options) renderResult(value interface{}, format string) error {
 	switch format {
 	case "json":
 		data, err := json.Marshal(value)

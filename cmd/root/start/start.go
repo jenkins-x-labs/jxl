@@ -15,11 +15,11 @@ type Start struct {
 }
 
 var (
-	start_long = templates.LongDesc(`
+	startLong = templates.LongDesc(`
 		Starts a process such as a pipeline.
 `)
 
-	start_example = templates.Examples(`
+	startExample = templates.Examples(`
 		# Start a pipeline
 		jx start pipeline foo
 	`)
@@ -35,8 +35,8 @@ func NewCmdStart(commonOpts *opts.CommonOptions) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "start TYPE [flags]",
 		Short:   "Starts a process such as a pipeline",
-		Long:    start_long,
-		Example: start_example,
+		Long:    startLong,
+		Example: startExample,
 		Run: func(cmd *cobra.Command, args []string) {
 			options.Cmd = cmd
 			options.Args = args
