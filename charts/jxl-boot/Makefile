@@ -2,7 +2,7 @@ CHART_REPO := gs://jenkinsxio-labs/charts
 NAME := jxl-boot
 
 build: clean
-	rm -rf requirements.lock
+	rm -rf Chart.lock
 	helm dependency build
 	helm lint
 
@@ -21,7 +21,6 @@ clean:
 
 release: clean
 	sed -i -e "s/version:.*/version: $(VERSION)/" Chart.yaml
-	sed -i -e "s/tag:.*/tag: $(VERSION)/" values.yaml
 
 	helm dependency build
 	helm lint
