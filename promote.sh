@@ -8,11 +8,10 @@ jx step create pr regex \
     --files "jenkins-x-*.yml" \
     --repo https://github.com/jenkins-x/jenkins-x-versions.git
 
-jx step create pr versions -k docker -n gcr.io/jenkinsxio-labs/jxl -v ${VERSION}
-jx step create pr versions -k packages -n jxl -v ${VERSION}
-
 jx step create pr regex \
-    --regex '\version: (.*)' \
+    --regex 'version: (.*)' \
     --version ${VERSION} \
+    --files docker/gcr.io/jenkinsxio-labs/jxl.yml \
+    --files packages/jxl.yml \
     --files charts/jx-labs/jxl-boot.yml \
     --repo https://github.com/jenkins-x/jenkins-x-versions.git
