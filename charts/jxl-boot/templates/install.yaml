@@ -92,7 +92,7 @@ spec:
           value: {{ .Values.boot.userEmail | quote }}
         - name: JX_HOME
           value: /secrets
-        image: {{ .Values.image.repository }}/jxl:{{ .Values.image.tag }}
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent
         name: boot
         volumeMounts:
