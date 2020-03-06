@@ -100,6 +100,7 @@ func outputEmptyListWarning(out io.Writer) error {
 	return err
 }
 
+// AddGetFlags adds flags for get
 func (o *Options) AddGetFlags(cmd *cobra.Command) {
 	o.Cmd = cmd
 	cmd.Flags().StringVarP(&o.Output, "output", "o", "", "The output format such as 'yaml'")
@@ -125,8 +126,4 @@ func (o *Options) renderResult(value interface{}, format string) error {
 	default:
 		return fmt.Errorf("Unsupported output format: %s", format)
 	}
-}
-
-func formatInt32(n int32) string {
-	return util.Int32ToA(n)
 }
