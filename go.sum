@@ -420,6 +420,8 @@ github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nI
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
 github.com/jenkins-x-labs/helmboot v0.0.45 h1:/4NpsRQOQunReEoYDFRHMFdmzyq5CUKzcsI5BY4FZV4=
 github.com/jenkins-x-labs/helmboot v0.0.45/go.mod h1:gXelWZJDijPJxsR8IXtcOSF5LKbySYLlOZSyyzryICI=
+github.com/jenkins-x-labs/helmboot v0.0.46 h1:YI4WjTiGDuXGUnU0Ci5M06tOPe5QqYdSFduz29E1xFA=
+github.com/jenkins-x-labs/helmboot v0.0.46/go.mod h1:gXelWZJDijPJxsR8IXtcOSF5LKbySYLlOZSyyzryICI=
 github.com/jenkins-x-labs/jwizard v0.0.13 h1:g3mVnnyopSfMUETkYV+o7ZxbH3zxT2UBm0Yf9dPGpxU=
 github.com/jenkins-x-labs/jwizard v0.0.13/go.mod h1:SRRAwdskLTQIK5u9xnrTn2PKj5WXUJOLIf8DMkwA6Tw=
 github.com/jenkins-x-labs/step-go-releaser v0.0.12 h1:bm5RwZZ5zljY/FkLLYTIDXKiDD57xAJeHnNpWOvJ5VE=
