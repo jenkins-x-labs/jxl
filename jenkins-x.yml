@@ -11,10 +11,10 @@ pipelineConfig:
         containerOptions:
           env:
             - name: GCP_SA
-              value: /secrets/gcr-sa.json
+              value: /secrets/gcr/credentials.json
           volumeMounts:
-            - mountPath: /secrets
-              name: gcr-sa
+            - name: gcr-sa
+              mountPath: /secrets/gcr
         step:
           sh: ./build.sh
     release:
@@ -39,6 +39,8 @@ pipelineConfig:
                         path: credentials.json
               containerOptions:
                 volumeMounts:
+                  - name: gcr-sa
+                    mountPath: /secrets/gcr
                   - name: chart-sa
                     mountPath: /secrets/charts
             steps:
