@@ -5,9 +5,18 @@ import (
 	"os"
 
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd/verify"
+	"github.com/jenkins-x-labs/jxl/cmd/root/get"
+	"github.com/jenkins-x-labs/jxl/cmd/root/start"
 	"github.com/jenkins-x-labs/jxl/cmd/root/step"
+	jxcmd "github.com/jenkins-x/jx/pkg/cmd"
 	"github.com/jenkins-x/jx/pkg/cmd/clients"
+	"github.com/jenkins-x/jx/pkg/cmd/namespace"
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
+	"github.com/jenkins-x/jx/pkg/cmd/preview"
+	"github.com/jenkins-x/jx/pkg/cmd/promote"
+	"github.com/jenkins-x/jx/pkg/cmd/rsh"
+	"github.com/jenkins-x/jx/pkg/cmd/stop"
+	"github.com/jenkins-x/jx/pkg/cmd/ui"
 	"github.com/jenkins-x/jx/pkg/helm"
 
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd"
@@ -62,6 +71,22 @@ func init() {
 	rootCmd.AddCommand(create.NewCmdCreateProject(commonOptions))
 
 	// lets import the jx commands
+	rootCmd.AddCommand(jxcmd.NewCmdCompletion(commonOptions))
+	rootCmd.AddCommand(jxcmd.NewCmdContext(commonOptions))
+	rootCmd.AddCommand(jxcmd.NewCmdEnvironment(commonOptions))
+	rootCmd.AddCommand(jxcmd.NewCmdLogs(commonOptions))
+	rootCmd.AddCommand(jxcmd.NewCmdPrompt(commonOptions))
+	rootCmd.AddCommand(jxcmd.NewCmdRepo(commonOptions))
+	rootCmd.AddCommand(jxcmd.NewCmdShell(commonOptions))
+
+	rootCmd.AddCommand(get.NewCmdGet(commonOptions))
+	rootCmd.AddCommand(namespace.NewCmdNamespace(commonOptions))
+	rootCmd.AddCommand(preview.NewCmdPreview(commonOptions))
+	rootCmd.AddCommand(promote.NewCmdPromote(commonOptions))
+	rootCmd.AddCommand(rsh.NewCmdRsh(commonOptions))
+	rootCmd.AddCommand(start.NewCmdStart(commonOptions))
 	rootCmd.AddCommand(step.NewCmdStep(commonOptions))
+	rootCmd.AddCommand(stop.NewCmdStop(commonOptions))
+	rootCmd.AddCommand(ui.NewCmdUI(commonOptions))
 
 }

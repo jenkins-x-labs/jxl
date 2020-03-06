@@ -31,6 +31,7 @@ github.com/BurntSushi/toml v0.3.0/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
+github.com/Comcast/kuberhealthy v1.0.2 h1:YX5iZSzMULyexKFVY+2TG0F2XZ4Soi9LpVEusiOrjy8=
 github.com/Comcast/kuberhealthy v1.0.2/go.mod h1:p7vxXAD/F7WgDtcexe8rcWrm6ELLuiUF222zxgWVFas=
 github.com/GoogleCloudPlatform/cloudsql-proxy v0.0.0-20181009230506-ac834ce67862/go.mod h1:aJ4qN3TfrelA6NZ6AXsXRfmEVaYin3EDbSPJrKS8OXo=
 github.com/IBM-Cloud/bluemix-go v0.0.0-20181008063305-d718d474c7c2 h1:XCMASpjZLfZHpFKaNYZkb5lNcnXBQvc5J/1K/FKeVTU=
@@ -418,8 +419,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nISok6EMoxpDXjQQcVIAGG8PrkX2dA=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
-github.com/jenkins-x-labs/helmboot v0.0.50 h1:bp2ZEmKwsC/+l87rM+pJUTqREhLCJsKDdDPxU+pmkig=
-github.com/jenkins-x-labs/helmboot v0.0.50/go.mod h1:+P2keOQX0adFvWupF4WjZpga1QTaU8qhZjUkhl6iZqw=
+github.com/jenkins-x-labs/helmboot v0.0.51 h1:gntG6Wn+1+e7pUQx2aqWFa3YCpqLc5paK17xUW1hKXE=
+github.com/jenkins-x-labs/helmboot v0.0.51/go.mod h1:+P2keOQX0adFvWupF4WjZpga1QTaU8qhZjUkhl6iZqw=
 github.com/jenkins-x-labs/jwizard v0.0.13 h1:g3mVnnyopSfMUETkYV+o7ZxbH3zxT2UBm0Yf9dPGpxU=
 github.com/jenkins-x-labs/jwizard v0.0.13/go.mod h1:SRRAwdskLTQIK5u9xnrTn2PKj5WXUJOLIf8DMkwA6Tw=
 github.com/jenkins-x-labs/step-go-releaser v0.0.12 h1:bm5RwZZ5zljY/FkLLYTIDXKiDD57xAJeHnNpWOvJ5VE=
@@ -591,6 +592,7 @@ github.com/petergtz/pegomock v2.7.0+incompatible/go.mod h1:nuBLWZpVyv/fLo56qTwt/
 github.com/pierrec/lz4 v0.0.0-20181005164709-635575b42742/go.mod h1:3/3N9NVKO0jef7pBehbT1qWhCMrIgbYNnFAZCqQ5LRc=
 github.com/pierrec/lz4 v2.0.5+incompatible h1:2xWsjqPFWcplujydGg4WmhC/6fZqK42wMM8aXeqhl0I=
 github.com/pierrec/lz4 v2.0.5+incompatible/go.mod h1:pdkljMzZIN41W+lC3N2tnIh5sFi+IEE17M5jbnwPHcY=
+github.com/pkg/browser v0.0.0-20170505125900-c90ca0c84f15 h1:mrI+6Ae64Wjt+uahGe5we/sPS1sXjvfT3YjtawAVgps=
 github.com/pkg/browser v0.0.0-20170505125900-c90ca0c84f15/go.mod h1:4OwLy04Bl9Ef3GJJCoec+30X3LQs/0/m4HFRt/2LUSA=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
