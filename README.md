@@ -6,10 +6,19 @@
 [![LICENSE](https://img.shields.io/github/license/jenkins-x-labs/jxl.svg)](https://github.com/jenkins-x-labs/jxl/blob/master/LICENSE)
 [![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://slack.k8s.io/)
 
-`jxl` is a CLI that collects a selection of commands from different repositories that enable experimental
-features with Jenkins X.
+`jxl` is the CLI for the [Jenkins X Labs](https://jenkins-x.io/docs/labs/)
 
-## WARNING
 
-This CLI is used as a staging towards Jenkins X Alpha commands so expect lots of changes, breaking changes are 
-likely and commands can be removed. 
+## Features
+
+* [helm 3 based boot with helmfile](https://jenkins-x.io/docs/labs/boot/)
+* [jenkins interop](https://jenkins-x.io/docs/labs/jenkins/)
+* [wizard improvements](https://jenkins-x.io/docs/labs/wizard/)
+
+## Downloading
+
+See [how to download jxl](https://jenkins-x.io/docs/labs/jxl/)
+
+## Issues
+
+To raise an issue see the [Jenkins X Labs issue tracker](https://github.com/jenkins-x-labs/issues/issues)
