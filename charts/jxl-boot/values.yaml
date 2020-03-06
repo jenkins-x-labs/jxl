@@ -1,5 +1,5 @@
 image:
-  tag: 0.0.52
+  tag: 0.0.67
   repository: gcr.io/jenkinsxio-labs/jxl
 boot:
   clusterName:
