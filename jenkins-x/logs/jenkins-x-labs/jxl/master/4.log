@@ -1,0 +1,32 @@
+
+Showing logs for build [32mjenkins-x-labs-jxl-master-h89kx-4[0m stage [32mchart[0m and container [32mstep-credential-initializer-bjnsb[0m
+{"level":"warn","ts":1583513178.223649,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583513178.2255058,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-x-labs-jxl-master-h89kx-4[0m stage [32mchart[0m and container [32mstep-working-dir-initializer-7kgj5[0m
+{"level":"warn","ts":1583513179.2603447,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583513179.2668624,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-x-labs-jxl-master-h89kx-4[0m stage [32mchart[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-x-labs-jxl-master-h89kx-4[0m stage [32mchart[0m and container [32mstep-git-source-jenkins-x-labs-jxl-master-h89kx-qrx46[0m
+{"level":"warn","ts":1583513248.6124647,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583513250.01735,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-x-labs/**l.git @ v0.0.75 in path /workspace/source"}
+
+Showing logs for build [32mjenkins-x-labs-jxl-master-h89kx-4[0m stage [32mchart[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5f3accf5a2c9527a44e8d60d512a250a8500bc6f
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkins-x-labs-jxl-master-h89kx-4[0m stage [32mchart[0m and container [32mstep-build-and-push-image[0m
+enabling GCP Service Account from /secrets/gcr-sa.json
+ERROR: (gcloud.auth.activate-service-account) Unable to read file [/secrets/gcr-sa.json]: [Errno 2] No such file or directory: '/secrets/gcr-sa.json'
+building container image version: 0.0.75
+ERROR: gcloud crashed (MetadataServerException): HTTP Error 400: Bad Request
+
+If you would like to report this issue, please run the following command:
+  gcloud feedback
+
+To check gcloud for common problems, please run the following command:
+  gcloud info --run-diagnostics
+[31m
+Pipeline failed on stage 'chart' : container 'step-build-and-push-image'. The execution of the pipeline has stopped.[0m
