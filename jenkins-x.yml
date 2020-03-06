@@ -1,6 +1,22 @@
 buildPack: go-cli
+dockerRegistryOwner: jenkinsxio-labs
 pipelineConfig:
   pipelines:
+    overrides:
+      - name: container-build
+        volumes:
+          - name: gcp-sa
+            secret:
+              secretName: gcp-sa
+        containerOptions:
+          env:
+            - name: GCP_SA
+              value: /secrets/gcp-sa.json
+          volumeMounts:
+            - mountPath: /secrets
+              name: gcp-sa
+        step:
+          sh: ./build.sh
     release:
       pipeline:
         stages:
@@ -25,23 +41,21 @@ pipelineConfig:
                 volumeMounts:
                   - name: chart-sa
                     mountPath: /secrets/charts
-                  - name: gcr-sa
-                    mountPath: /secrets/gcr
             steps:
+              - name: build-and-push-image
+                command: ./build.sh
+
+              - name: release-chart
+                command: make release
+                image: gcr.io/jenkinsxio-labs/helm:0.0.3
+                dir: /workspace/source/charts/jxl-boot
+                env:
+                  - name: GOOGLE_APPLICATION_CREDENTIALS
+                    value: /secrets/charts/credentials.json
+
               - name: release-binary
                 command: make release
                 image: golang:1.12
-
-              - name: build-and-push-image
-                command: /kaniko/executor
-                image: gcr.io/kaniko-project/executor:9912ccbf8d22bbafbf971124600fbb0b13b9cbd6
-                args:
-                  - --dockerfile=/workspace/source/Dockerfile
-                  - --destination=gcr.io/jenkinsxio-labs/jxl:${inputs.params.version}
-                  - --context=/workspace/source
-                env:
-                  - name: GOOGLE_APPLICATION_CREDENTIALS
-                    value: /secrets/gcr/credentials.json
 
               - name: changelog
                 command: jx step changelog --verbose --header-file=hack/changelog-header.md --version=$VERSION --rev=$PULL_BASE_SHA --output-markdown=changelog.md --update-release=false
@@ -51,13 +65,6 @@ pipelineConfig:
                 command: make goreleaser
                 image: rawlingsj80/goreleaser:wip6
 
-              - name: release-chart
-                command: make release
-                image: gcr.io/jenkinsxio-labs/helm:0.0.3
-                dir: /workspace/source/charts/jxl-boot
-                env:
-                  - name: GOOGLE_APPLICATION_CREDENTIALS
-                    value: /secrets/charts/credentials.json
       promote:
         steps:
           - command: ./promote.sh
