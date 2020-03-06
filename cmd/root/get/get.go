@@ -13,7 +13,6 @@ import (
 	"github.com/ghodss/yaml"
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
 	"github.com/jenkins-x/jx/pkg/cmd/templates"
-	"github.com/jenkins-x/jx/pkg/util"
 )
 
 // Options is the start of the data required to perform the operation.  As new fields are added, add them here instead of
