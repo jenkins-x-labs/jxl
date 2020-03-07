@@ -2,8 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   labels:
-    release: jenkins-x
-  name: jx-boot
+    {{- include "jxl-boot.labels" . | nindent 4 }}
+  name: {{ include "jxl-boot.fullname" . }}-job
 spec:
   backoffLimit: 5
   completions: 1
@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        release: jenkins-x
+        {{- include "jxl-boot.labels" . | nindent 8 }}
     spec:
       containers:
       - args:
@@ -99,9 +99,7 @@ spec:
         - mountPath: /secrets/jx-boot
           name: jx-boot-secrets
       restartPolicy: Never
-      serviceAccountName: boot-sa
-      # TODO once we've got the gcloud instructions to work with this SA we'll switch back
-      #serviceAccountName: {{ include "jxl-boot.serviceAccountName" . }}
+      serviceAccountName: {{ include "jxl-boot.serviceAccountName" . }}
       volumes:
       - name: jx-boot-secrets
         secret:
