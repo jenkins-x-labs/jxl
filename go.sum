@@ -421,6 +421,8 @@ github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nI
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
 github.com/jenkins-x-labs/helmboot v0.0.51 h1:gntG6Wn+1+e7pUQx2aqWFa3YCpqLc5paK17xUW1hKXE=
 github.com/jenkins-x-labs/helmboot v0.0.51/go.mod h1:+P2keOQX0adFvWupF4WjZpga1QTaU8qhZjUkhl6iZqw=
+github.com/jenkins-x-labs/helmboot v0.0.53 h1:CNH8bCGOi6I8F7bz0v20or4PPwPaOKmpMJqGPSsVimc=
+github.com/jenkins-x-labs/helmboot v0.0.53/go.mod h1:+P2keOQX0adFvWupF4WjZpga1QTaU8qhZjUkhl6iZqw=
 github.com/jenkins-x-labs/jwizard v0.0.13 h1:g3mVnnyopSfMUETkYV+o7ZxbH3zxT2UBm0Yf9dPGpxU=
 github.com/jenkins-x-labs/jwizard v0.0.13/go.mod h1:SRRAwdskLTQIK5u9xnrTn2PKj5WXUJOLIf8DMkwA6Tw=
 github.com/jenkins-x-labs/step-go-releaser v0.0.12 h1:bm5RwZZ5zljY/FkLLYTIDXKiDD57xAJeHnNpWOvJ5VE=
