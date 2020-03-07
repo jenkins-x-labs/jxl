@@ -99,7 +99,9 @@ spec:
         - mountPath: /secrets/jx-boot
           name: jx-boot-secrets
       restartPolicy: Never
-      serviceAccountName: {{ include "jxl-boot.serviceAccountName" . }}
+      serviceAccountName: boot-sa
+      # TODO once we've got the gcloud instructions to work with this SA we'll switch back
+      #serviceAccountName: {{ include "jxl-boot.serviceAccountName" . }}
       volumes:
       - name: jx-boot-secrets
         secret:
