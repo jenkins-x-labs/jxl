@@ -104,8 +104,3 @@ spec:
       - name: jx-boot-secrets
         secret:
           secretName: jx-boot-secrets
-      {{- if .Values.secrets.env.enabled }}
-      - name: config-volume
-        configMap:
-          name: boot-secrets-template
-      {{- end }}

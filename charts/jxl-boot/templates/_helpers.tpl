@@ -61,3 +61,13 @@ Create the name of the service account to use
     {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Return true if a secret object should be created
+*/}}
+{{- define "jxl-boot.createSecret" -}}
+{{- if .Values.existingSecret -}}
+{{- else -}}
+    {{- true -}}
+{{- end -}}
+{{- end -}}
