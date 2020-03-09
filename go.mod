@@ -7,7 +7,7 @@ require (
 	github.com/ghodss/yaml v1.0.0
 	github.com/jenkins-x-labs/helmboot v0.0.53
 	github.com/jenkins-x-labs/jwizard v0.0.13
-	github.com/jenkins-x-labs/step-go-releaser v0.0.12
+	github.com/jenkins-x-labs/step-go-releaser v0.0.18
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
 	github.com/jenkins-x/jx v0.0.0-20200305083540-7eafabca234c
 	github.com/pkg/errors v0.9.1
