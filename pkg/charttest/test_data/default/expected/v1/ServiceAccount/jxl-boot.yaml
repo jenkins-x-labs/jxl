@@ -1,0 +1,13 @@
+# Source: jxl-boot/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jxl-boot
+  # name: jxl-boot
+  labels:
+    helm.sh/chart: jxl-boot-0.1.0
+    app.kubernetes.io/name: jxl-boot
+    app.kubernetes.io/instance: myrel
+    app.kubernetes.io/version: "0.0.88"
+    app.kubernetes.io/managed-by: Helm
+  annotations:

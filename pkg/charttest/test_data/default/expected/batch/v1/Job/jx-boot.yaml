@@ -1,3 +1,4 @@
+# Source: jxl-boot/templates/install.yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -19,13 +20,13 @@ spec:
         - run
         - -b
         - --git-url
-        - {{ .Values.boot.bootGitURL | quote }}
+        - "https://github.com/jenkins-x/jenkins-x-boot-helmfile-config.git"
         - --git-ref
-        - {{ .Values.boot.bootGitRef | quote }}
+        - "master"
         - --versions-repo
-        - {{ .Values.boot.versionsGitURL | quote }}
+        - "https://github.com/jenkins-x/jenkins-x-versions.git"
         - --versions-ref
-        - {{ .Values.boot.versionsGitRef | quote }}
+        - "master"
         command:
         - jxl
 
@@ -54,7 +55,7 @@ spec:
         - name: JX_REQUIREMENT_TERRAFORM
           value: "true"
         - name: JX_REQUIREMENT_ENV_GIT_OWNER
-          value: "{{ .Values.boot.environmentGitOwner }}"
+          value: ""
         - name: JX_REQUIREMENT_KANIKO_SA_NAME
           value: kaniko-sa
 
@@ -63,21 +64,21 @@ spec:
         - name: JX_REQUIREMENT_EXTERNALDNS_SA_NAME
           value: externaldns-sa
         - name: JX_REQUIREMENT_INGRESS_TLS_PRODUCTION
-          value: {{ .Values.boot.tls.production | quote }}
+          value: "false"
         - name: JX_REQUIREMENT_ENV_GIT_PUBLIC
-          value: {{ .Values.boot.publicEnvironmentGit | quote }}
+          value: "false"
         - name: JX_REQUIREMENT_GIT_PUBLIC
-          value: {{ .Values.boot.publicGit | quote }}
+          value: "false"
         - name: JX_REQUIREMENT_STORAGE_BACKUP_ENABLED
           value: "true"
         - name: JX_REQUIREMENT_PROVIDER
-          value:  {{ .Values.boot.provider | quote }}
+          value:  "gke"
         - name: JX_REQUIREMENT_PROJECT
-          value:  {{ .Values.boot.projectID | quote }}
+          value:  
         - name: JX_REQUIREMENT_CLUSTER_NAME
-          value: {{ .Values.boot.clusterName | quote }}
+          value: 
         - name: JX_REQUIREMENT_ZONE
-          value: {{ .Values.boot.zone | quote }}
+          value: 
         # - name: JX_REQUIREMENT_STORAGE_BACKUP_URL
         #   value: ${storage_backup_url}
         # - name: JX_REQUIREMENT_STORAGE_LOGS_ENABLED
@@ -89,23 +90,18 @@ spec:
         # - name: JX_REQUIREMENT_STORAGE_REPOSITORY_ENABLED
         #   value: "false"
         - name: USER_EMAIL
-          value: {{ .Values.boot.userEmail | quote }}
+          value: 
         - name: JX_HOME
           value: /secrets
-        image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: "gcr.io/jenkinsxio-labs/jxl:0.0.88"
+        imagePullPolicy: IfNotPresent
         name: boot
         volumeMounts:
         - mountPath: /secrets/jx-boot
           name: jx-boot-secrets
       restartPolicy: Never
-      serviceAccountName: {{ include "jxl-boot.serviceAccountName" . }}
+      serviceAccountName: jxl-boot
       volumes:
       - name: jx-boot-secrets
         secret:
           secretName: jx-boot-secrets
-      {{- if .Values.secrets.env.enabled }}
-      - name: config-volume
-        configMap:
-          name: boot-secrets-template
-      {{- end }}
