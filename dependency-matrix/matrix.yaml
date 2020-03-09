@@ -15,8 +15,8 @@ dependencies:
   owner: jenkins-x-labs
   repo: step-go-releaser
   url: https://github.com/jenkins-x-labs/step-go-releaser
-  version: 0.0.12
-  versionURL: https://github.com/jenkins-x-labs/step-go-releaser/releases/tag/v0.0.12
+  version: 0.0.18
+  versionURL: https://github.com/jenkins-x-labs/step-go-releaser/releases/tag/v0.0.18
 - host: github.com
   owner: jenkins-x-labs
   repo: jxl-base-image
