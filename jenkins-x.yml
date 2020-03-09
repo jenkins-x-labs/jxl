@@ -65,7 +65,7 @@ pipelineConfig:
 
               - name: upload-binaries
                 command: make goreleaser
-                image: rawlingsj80/goreleaser:wip6
+                image: gcr.io/jenkinsxio-labs/go-releaser:0.0.18
 
       promote:
         steps:
