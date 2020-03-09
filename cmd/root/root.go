@@ -8,6 +8,8 @@ import (
 	"github.com/jenkins-x-labs/jxl/cmd/root/get"
 	"github.com/jenkins-x-labs/jxl/cmd/root/start"
 	"github.com/jenkins-x-labs/jxl/cmd/root/step"
+	"github.com/jenkins-x-labs/jxl/pkg/cmd/upgrade"
+	"github.com/jenkins-x-labs/jxl/pkg/cmd/version"
 	jxcmd "github.com/jenkins-x/jx/pkg/cmd"
 	"github.com/jenkins-x/jx/pkg/cmd/clients"
 	"github.com/jenkins-x/jx/pkg/cmd/namespace"
@@ -69,6 +71,9 @@ func init() {
 	jwcommon.TopLevelCommand = "project"
 	jwcommon.BinaryName = "jxl project"
 	rootCmd.AddCommand(create.NewCmdCreateProject(commonOptions))
+
+	rootCmd.AddCommand(upgrade.NewCmdUpgrade(commonOptions))
+	rootCmd.AddCommand(version.NewCmdVersion(commonOptions))
 
 	// lets import the jx commands
 	rootCmd.AddCommand(jxcmd.NewCmdCompletion(commonOptions))
