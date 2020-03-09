@@ -8,7 +8,6 @@ import (
 
 	"github.com/blang/semver"
 	"github.com/jenkins-x-labs/jxl/pkg/cmd/upgrade"
-	"github.com/jenkins-x/jx/pkg/brew"
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
 	"github.com/jenkins-x/jx/pkg/log"
 	"github.com/jenkins-x/jx/pkg/version"
@@ -84,12 +83,6 @@ var sampleBrewInfo = `[
    }
 ]`
 
-func TestLatestJxBrewVersion(t *testing.T) {
-	version, err := brew.LatestJxBrewVersion(sampleBrewInfo)
-	assert.NoError(t, err)
-	assert.Equal(t, "2.0.181", version)
-}
-
 func TestNeedsUpgrade(t *testing.T) {
 	type testData struct {
 		current               string
@@ -100,7 +93,7 @@ func TestNeedsUpgrade(t *testing.T) {
 
 	testCases := []testData{
 		{
-			"1.0.0", "1.0.0", false, "You are already on the latest version of jx 1.0.0\n",
+			"1.0.0", "1.0.0", false, "You are already on the latest version of jxl 1.0.0\n",
 		},
 		{
 			"1.0.0", "1.0.1", true, "",
@@ -145,7 +138,7 @@ func TestVersionCheckWhenCurrentVersionIsEqualToReleaseVersion(t *testing.T) {
 }
 
 func TestVersionCheckWhenCurrentVersionIsLessThanReleaseVersion(t *testing.T) {
-	jxVersion := semver.Version{Major: 1, Minor: 3, Patch: 153}
+	jxVersion := semver.Version{Major: 3, Minor: 1, Patch: 153}
 	version.Map["version"] = "1.0.0"
 	opts := &upgrade.UpgradeCLIOptions{
 		CommonOptions: &opts.CommonOptions{},
