@@ -442,6 +442,8 @@ github.com/jenkins-x/helm-unit-tester v0.0.6 h1:IurcBXAMcJS0T9oej7JRZ+9P54Au4dlr
 github.com/jenkins-x/helm-unit-tester v0.0.6/go.mod h1:aJarZq7xZD9hTCUQqoxjuq9Blo17tOJ1pISO0+H89ec=
 github.com/jenkins-x/jx v0.0.0-20200305083540-7eafabca234c h1:UayD2pQKFKFZzOlJwU71JWJ/lb/AKWuqGmtgQCPd+9k=
 github.com/jenkins-x/jx v0.0.0-20200305083540-7eafabca234c/go.mod h1:QZVsigjVZ634iK2TqkIs10yANye4JbBF2bHd3i41U8o=
+github.com/jenkins-x/jx v0.0.0-20200309164145-0a8e0ddca598 h1:hsCO3O0mQFTXhXk9Gf89aFIvIUT9r+dNizmz+x8/cQg=
+github.com/jenkins-x/jx v0.0.0-20200309164145-0a8e0ddca598/go.mod h1:QZVsigjVZ634iK2TqkIs10yANye4JbBF2bHd3i41U8o=
 github.com/jetstack/cert-manager v0.5.2 h1:qs74mdAprZ5kcCYF3arzmEAZtbt+9HneldSJrk21tKs=
 github.com/jetstack/cert-manager v0.5.2/go.mod h1:nbddmhjWxYGt04bxvwVGUSeLhZ2PCyNvd7MpXdq+yWY=
 github.com/jinzhu/gorm v0.0.0-20170316141641-572d0a0ab1eb/go.mod h1:Vla75njaFJ8clLU1W44h34PjIkijhjHIYnZxMqCdxqo=
