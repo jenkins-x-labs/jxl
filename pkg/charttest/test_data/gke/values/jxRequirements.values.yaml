@@ -1,0 +1,18 @@
+secrets:
+  tektonBucket: ""
+  featureFlagAPIKey: ""
+  chartMuseum:
+    username: ""
+    password: ""
+  pipelineUser:
+    username: ""
+    email: ""
+    token: ""
+
+jxRequirements:
+  cluster:
+    clusterName: mycluster
+    namespace: jx
+    project: myproject
+    provider: gke
+    zone: europe-west1-c

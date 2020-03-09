@@ -9,10 +9,12 @@ require (
 	github.com/jenkins-x-labs/jwizard v0.0.13
 	github.com/jenkins-x-labs/step-go-releaser v0.0.18
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
+	github.com/jenkins-x/helm-unit-tester v0.0.6
 	github.com/jenkins-x/jx v0.0.0-20200305083540-7eafabca234c
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v0.0.6
 	github.com/stretchr/testify v1.4.0
+	sigs.k8s.io/yaml v1.1.0
 )
 
 replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0

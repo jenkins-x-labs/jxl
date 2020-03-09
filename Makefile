@@ -162,3 +162,7 @@ lint: ## Lint the code
 
 .PHONY: all
 all: fmt build lint test
+
+test-regen:
+	cd pkg/charttest && export HELM_UNIT_REGENERATE_EXPECTED=true && go test -v
+
