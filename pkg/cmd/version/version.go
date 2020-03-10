@@ -42,12 +42,6 @@ func NewCmdVersion(commonOpts *opts.CommonOptions) *cobra.Command {
 			helper.CheckErr(err)
 		},
 	}
-	/*
-		cmd.Flags().BoolP("client", "c", false, "Client version only (no server required).")
-		cmd.Flags().BoolP("short", "", false, "Print just the version number.")
-	*/
-	cmd.Flags().MarkShorthandDeprecated("client", "please use --client instead.")
-	cmd.Flags().BoolVarP(&options.HelmTLS, "helm-tls", "", false, "Whether to use TLS with helm")
 	cmd.Flags().BoolVarP(&options.NoVersionCheck, "no-version-check", "n", false, "Disable checking of version upgrade checks")
 	cmd.Flags().BoolVarP(&options.NoVerify, "no-verify", "", false, "Disable verification of package versions")
 	cmd.Flags().StringVarP(&options.Namespace, "namespace", "", "", "The namespace to use to look for currently installed platform version")

@@ -1,16 +1,11 @@
 package get
 
 import (
-	"encoding/json"
-	"fmt"
-	"io"
-
 	jxget "github.com/jenkins-x/jx/pkg/cmd/get"
 	"github.com/jenkins-x/jx/pkg/cmd/helper"
 
 	"github.com/spf13/cobra"
 
-	"github.com/ghodss/yaml"
 	"github.com/jenkins-x/jx/pkg/cmd/opts"
 	"github.com/jenkins-x/jx/pkg/cmd/templates"
 )
@@ -93,36 +88,8 @@ func (o *Options) Run() error {
 	return o.Cmd.Help()
 }
 
-// outputEmptyListWarning outputs a warning indicating that no items are available to display
-func outputEmptyListWarning(out io.Writer) error {
-	_, err := fmt.Fprintf(out, "%s\n", "No resources found.")
-	return err
-}
-
 // AddGetFlags adds flags for get
 func (o *Options) AddGetFlags(cmd *cobra.Command) {
 	o.Cmd = cmd
 	cmd.Flags().StringVarP(&o.Output, "output", "o", "", "The output format such as 'yaml'")
-}
-
-// renderResult renders the result in a given output format
-func (o *Options) renderResult(value interface{}, format string) error {
-	switch format {
-	case "json":
-		data, err := json.Marshal(value)
-		if err != nil {
-			return err
-		}
-		_, e := o.Out.Write(data)
-		return e
-	case "yaml":
-		data, err := yaml.Marshal(value)
-		if err != nil {
-			return err
-		}
-		_, e := o.Out.Write(data)
-		return e
-	default:
-		return fmt.Errorf("Unsupported output format: %s", format)
-	}
 }
