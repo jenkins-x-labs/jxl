@@ -18,7 +18,7 @@ jobs:
         wget https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
 
      
-        mkdir -p /tmp/kube/config
+        mkdir -p /tmp/kube
         export KUBECONFIG=/tmp/kube/config
         kind get kubeconfig > $KUBECONFIG
 
