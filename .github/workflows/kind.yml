@@ -5,10 +5,8 @@ jobs:
   kind:
     runs-on: ubuntu-latest
     steps:
-    - name: Kind
-      uses: actions/checkout@master
-      env:
-        KIND_BDD_SECRETS: ${{ secrets.KIND_BDD_SECRETS }}
+    - uses: actions/checkout@v2
+    - name: Build
       run: |
         export GOBIN=$(go env GOPATH)/bin
         export PATH=$GOBIN:$PATH
@@ -24,7 +22,12 @@ jobs:
         wget https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
 
         make build
-
+    - name: Kind
+      env:
+        KIND_BDD_SECRETS: ${{ secrets.KIND_BDD_SECRETS }}
+      run: |
+        export GOBIN=$(go env GOPATH)/bin
+        export PATH=$GOBIN:$PATH
         echo "now testing the binary:"
         ./build/jxl help
 
