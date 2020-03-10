@@ -20,15 +20,16 @@ jobs:
      
         mkdir -p /tmp/kube
         export KUBECONFIG=/tmp/kube/config
-        kind get kubeconfig > $KUBECONFIG
 
         git clone https://github.com/jenkins-x-labs/cloud-resources.git
-        cd cloud-resources/kind
-        ./create_cluster.sh
-        cd ../..
-        
-        kubectl wait --for=condition=Ready pods --all --namespace kube-system
+        echo "creating kind cluster"
+        ./cloud-resources/kind/create_cluster.sh
+        echo "kind cluster created; now connecting to it"
+
+        kind get kubeconfig > $KUBECONFIG
+
         kubectl cluster-info
+        kubectl wait --for=condition=Ready pods --all --namespace kube-system
         kubectl get pods -n kube-system
         
         echo "now lets create a new cluster"
