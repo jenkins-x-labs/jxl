@@ -7,6 +7,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Kind
+      env:
+        KIND_BDD_SECRETS: ${{ secrets.KIND_BDD_SECRETS }}
       run: |
         export GOBIN=$(go env GOPATH)/bin
         export PATH=$PATH:$GOBIN
@@ -32,6 +34,12 @@ jobs:
         kubectl wait --for=condition=Ready pods --all --namespace kube-system
         kubectl get pods -n kube-system
         
-        echo "now lets create a new cluster"
+        echo "now lets import the secrets"
         
-        ./build/jxl run -git-url https://github.com/jstrachan/environment-kind-dev2
+        echo $KIND_BDD_SECRETS > /tmp/secrets.yaml        
+        ./build/jxl boot secrets import --git-url https://github.com/jstrachan/environment-kind-dev2 -f /tmp/secrets.yaml
+        rm /tmp/secrets.yaml
+
+        echo "now lets boot the cluster"
+
+        ./build/jxl boot run --git-url https://github.com/jstrachan/environment-kind-dev2
