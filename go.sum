@@ -425,6 +425,8 @@ github.com/jenkins-x-labs/helmboot v0.0.55 h1:TGA9+K10t+QJUqe4ljI7Iy3JQBj30s3ZbE
 github.com/jenkins-x-labs/helmboot v0.0.55/go.mod h1:+P2keOQX0adFvWupF4WjZpga1QTaU8qhZjUkhl6iZqw=
 github.com/jenkins-x-labs/jwizard v0.0.13 h1:g3mVnnyopSfMUETkYV+o7ZxbH3zxT2UBm0Yf9dPGpxU=
 github.com/jenkins-x-labs/jwizard v0.0.13/go.mod h1:SRRAwdskLTQIK5u9xnrTn2PKj5WXUJOLIf8DMkwA6Tw=
+github.com/jenkins-x-labs/jwizard v0.0.14 h1:m7nZNF7lQvW0HQnYtCy/y8vGN2lryWaefGNfRa8/6c8=
+github.com/jenkins-x-labs/jwizard v0.0.14/go.mod h1:oVJrZZg/uFYlzwTArj1eruXDw5la7LfxmWWISmw45QU=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18 h1:gOFw+XV/lQ/EchHuUpLdGQEKw3K3aQFOWpKQ1fsAt1A=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18/go.mod h1:k/JSZstlZ7X+UX2uTdwjwJvKQc2Yr5yjtSdwJKMze0s=
 github.com/jenkins-x-labs/trigger-pipeline v0.0.0-20200221170624-ad1e693a8fcd/go.mod h1:aiqfUuZO2rFP/v7mI4l6dNWh4Gj4pzn54gY/Qkdtpzo=
