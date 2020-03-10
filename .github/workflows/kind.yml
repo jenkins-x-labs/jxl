@@ -5,8 +5,8 @@ jobs:
   kind:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
     - name: Build
+      uses: actions/checkout@master
       run: |
         export GOBIN=$(go env GOPATH)/bin
         export PATH=$GOBIN:$PATH
@@ -28,6 +28,8 @@ jobs:
       run: |
         export GOBIN=$(go env GOPATH)/bin
         export PATH=$GOBIN:$PATH
+
+        ./build/jxl help
 
         mkdir -p /tmp/kube
         export KUBECONFIG=/tmp/kube/config
