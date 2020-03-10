@@ -9,7 +9,7 @@
       goarch: amd64
       goos: windows
   name: helmboot
-  version: "0.0.46"
+  version: "0.0.56"
   subCommand: boot
   description: "commands for booting up a Jenkins X cluster via GitOps"
 - binaries:
