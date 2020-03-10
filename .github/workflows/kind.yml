@@ -1,0 +1,36 @@
+name: Kind
+on: [push, pull_request]
+
+jobs:
+  kind:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Kind
+      run: |
+        export GOBIN=$(go env GOPATH)/bin
+        export PATH=$PATH:$GOBIN
+        mkdir -p $GOBIN
+        make build
+
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+        chmod +x kubectl && mv kubectl $GOBIN
+        wget https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
+
+     
+        mkdir -p /tmp/kube/config
+        export KUBECONFIG=/tmp/kube/config
+        kind get kubeconfig > $KUBECONFIG
+
+        git clone https://github.com/jenkins-x-labs/cloud-resources.git
+        cd cloud-resources/kind
+        ./create_cluster.sh
+        cd ../..
+        
+        kubectl wait --for=condition=Ready pods --all --namespace kube-system
+        kubectl cluster-info
+        kubectl get pods -n kube-system
+        
+        echo "now lets create a new cluster"
+        
+        ./build/jxl run -git-url https://github.com/jstrachan/environment-kind-dev2
