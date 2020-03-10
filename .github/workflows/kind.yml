@@ -45,7 +45,7 @@ jobs:
         
         echo "now lets import the secrets"
         
-        echo "${KIND_BDD_SECRETS" > /tmp/secrets.yaml
+        echo "${KIND_BDD_SECRETS}" > /tmp/secrets.yaml
         echo "now lets count words in the secrets yaml"
         wc /tmp/secrets.yaml
 
