@@ -5,19 +5,32 @@ jobs:
   kind:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Kind
+    - uses: actions/checkout@v2
+    - name: Build
       run: |
         export GOBIN=$(go env GOPATH)/bin
-        export PATH=$PATH:$GOBIN
+        export PATH=$GOBIN:$PATH
         mkdir -p $GOBIN
-        make build
+
+        export HELM_PLATFORM=linux-amd64 && export HELM_VERSION=helm-v3.0.2
+        wget https://get.helm.sh/$HELM_VERSION-$HELM_PLATFORM.tar.gz && tar -xvzf $HELM_VERSION-$HELM_PLATFORM.tar.gz && rm -rf $HELM_VERSION-$HELM_PLATFORM.tar.gz && mv $HELM_PLATFORM/helm $GOBIN/helm && chmod +x $GOBIN/helm
+
+        helm version
 
         curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
         chmod +x kubectl && mv kubectl $GOBIN
         wget https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
 
-     
+        make build
+    - name: Kind
+      env:
+        KIND_BDD_SECRETS: ${{ secrets.KIND_BDD_SECRETS }}
+      run: |
+        export GOBIN=$(go env GOPATH)/bin
+        export PATH=$GOBIN:$PATH
+        echo "now testing the binary:"
+        ./build/jxl help
+
         mkdir -p /tmp/kube
         export KUBECONFIG=/tmp/kube/config
 
@@ -32,6 +45,15 @@ jobs:
         kubectl wait --for=condition=Ready pods --all --namespace kube-system
         kubectl get pods -n kube-system
         
-        echo "now lets create a new cluster"
+        echo "now lets import the secrets"
         
-        ./build/jxl run -git-url https://github.com/jstrachan/environment-kind-dev2
+        echo "${KIND_BDD_SECRETS}" > /tmp/secrets.yaml
+        echo "now lets count words in the secrets yaml"
+        wc /tmp/secrets.yaml
+
+        ./build/jxl boot secrets import --git-url https://github.com/jstrachan/environment-kind-dev2 -f /tmp/secrets.yaml
+        rm /tmp/secrets.yaml
+
+        echo "now lets boot the cluster"
+
+        ./build/jxl boot run --git-url https://github.com/jstrachan/environment-kind-dev2

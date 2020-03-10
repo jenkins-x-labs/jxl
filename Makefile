@@ -158,10 +158,9 @@ importfmt: get-fmt-deps
 lint: ## Lint the code
 	./hack/gofmt.sh
 	./hack/linter.sh
-	./hack/generate.sh
 
 .PHONY: all
-all: fmt build lint test
+all: fmt build test lint
 
 test-regen:
 	cd pkg/charttest && export HELM_UNIT_REGENERATE_EXPECTED=true && go test -v
