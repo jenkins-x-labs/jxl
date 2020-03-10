@@ -11,15 +11,20 @@ jobs:
         KIND_BDD_SECRETS: ${{ secrets.KIND_BDD_SECRETS }}
       run: |
         export GOBIN=$(go env GOPATH)/bin
-        export PATH=$PATH:$GOBIN
+        export PATH=$GOBIN:$PATH
         mkdir -p $GOBIN
-        make build
+
+        export HELM_PLATFORM=linux-amd64 && export HELM_VERSION=helm-v3.0.2
+        wget https://get.helm.sh/$HELM_VERSION-$HELM_PLATFORM.tar.gz && tar -xvzf $HELM_VERSION-$HELM_PLATFORM.tar.gz && rm -rf $HELM_VERSION-$HELM_PLATFORM.tar.gz && mv $HELM_PLATFORM/helm $GOBIN/helm && chmod +x $GOBIN/helm3
+
+        helm version
 
         curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
         chmod +x kubectl && mv kubectl $GOBIN
         wget https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
 
-     
+        make build
+
         mkdir -p /tmp/kube
         export KUBECONFIG=/tmp/kube/config
 
