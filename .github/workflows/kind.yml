@@ -71,14 +71,15 @@ jobs:
         git config --global --add user.name JenkinsXBot
         git config --global --add user.email jenkins-x@googlegroups.com
 
+        echo "creating the dev git repository: https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev"
         jxl boot create -b --provider=kind --repository=bucketrepo --env-git-owner=$GH_OWNER --cluster=$CLUSTER_NAME --env-git-public  --git-public
 
-        jxl boot secrets import --git-url https://github.com/$CLUSTER_NAME/environment-$CLUSTER_NAME-dev -f /tmp/secrets.yaml
+        jxl boot secrets import --git-url https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev -f /tmp/secrets.yaml
         rm /tmp/secrets.yaml
 
         echo "now lets boot the cluster"
 
-        jxl boot run --git-url https://github.com/$CLUSTER_NAME/environment-$CLUSTER_NAME-dev
+        jxl boot run --git-url https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev
 
         echo "created the following environments:"
 
