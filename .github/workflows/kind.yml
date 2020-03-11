@@ -72,7 +72,7 @@ jobs:
         git config --global --add user.email jenkins-x@googlegroups.com
 
         echo "creating the dev git repository: https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev"
-        jxl boot create -b --provider=kind --repository=bucketrepo --env-git-owner=$GH_OWNER --cluster=$CLUSTER_NAME --env-git-public  --git-public
+        jxl boot create -b --provider=kind --repository=bucketrepo --env-git-owner=$GH_OWNER --cluster=$CLUSTER_NAME
 
         jxl boot secrets import --git-url https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev -f /tmp/secrets.yaml
         rm /tmp/secrets.yaml
