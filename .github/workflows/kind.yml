@@ -8,21 +8,25 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        env | sort
-        echo "GITHUB env vars are: $(env | sort | grep GITHUB)"
-
         export GOBIN=$(go env GOPATH)/bin
         export PATH=$GOBIN:$PATH
         mkdir -p $GOBIN
 
-        export HELM_PLATFORM=linux-amd64 && export HELM_VERSION=helm-v3.0.2
+        echo "GITHUB env vars are: $(env | sort | grep GITHUB)"
+
+        export KIND_VERSION=0.7.0
+        export KUBECTL_VERSION=1.16.0
+
+        export HELM_PLATFORM=linux-amd64
+        export HELM_VERSION=helm-v3.0.2
+
         wget https://get.helm.sh/$HELM_VERSION-$HELM_PLATFORM.tar.gz && tar -xvzf $HELM_VERSION-$HELM_PLATFORM.tar.gz && rm -rf $HELM_VERSION-$HELM_PLATFORM.tar.gz && mv $HELM_PLATFORM/helm $GOBIN/helm && chmod +x $GOBIN/helm
 
         helm version
 
-        curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl
         chmod +x kubectl && mv kubectl $GOBIN
-        wget https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
+        wget https://github.com/kubernetes-sigs/kind/releases/download/v${KIND_VERSION}/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
 
         make build
     - name: Kind
@@ -55,7 +59,7 @@ jobs:
         wc /tmp/secrets.yaml
 
 
-        export CLUSTER_NAME="kind-pr-1"
+        export CLUSTER_NAME="kind-${GITHUB_RUN_ID}"
         export GH_OWNER="jenkins-x-versions-bot-test"
 
         jxl boot create -b --provider=kind --repository=bucketrepo --env-git-owner=$GH_OWNER --cluster=$CLUSTER_NAME --env-git-public  --git-public
