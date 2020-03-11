@@ -1,5 +1,5 @@
 name: Kind
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   kind:
@@ -12,22 +12,30 @@ jobs:
         export PATH=$GOBIN:$PATH
         mkdir -p $GOBIN
 
-        export HELM_PLATFORM=linux-amd64 && export HELM_VERSION=helm-v3.0.2
+        echo "GITHUB env vars are: $(env | sort | grep GITHUB)"
+
+        export KIND_VERSION=0.7.0
+        export KUBECTL_VERSION=1.16.0
+
+        export HELM_PLATFORM=linux-amd64
+        export HELM_VERSION=helm-v3.0.2
+
         wget https://get.helm.sh/$HELM_VERSION-$HELM_PLATFORM.tar.gz && tar -xvzf $HELM_VERSION-$HELM_PLATFORM.tar.gz && rm -rf $HELM_VERSION-$HELM_PLATFORM.tar.gz && mv $HELM_PLATFORM/helm $GOBIN/helm && chmod +x $GOBIN/helm
 
         helm version
 
-        curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl
         chmod +x kubectl && mv kubectl $GOBIN
-        wget https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
+        wget https://github.com/kubernetes-sigs/kind/releases/download/v${KIND_VERSION}/kind-linux-amd64 && chmod +x kind-linux-amd64 && mv kind-linux-amd64 $GOBIN/kind
 
         make build
     - name: Kind
       env:
         KIND_BDD_SECRETS: ${{ secrets.KIND_BDD_SECRETS }}
+        GIT_CREDENTIALS: ${{ secrets.GIT_CREDENTIALS }}
       run: |
         export GOBIN=$(go env GOPATH)/bin
-        export PATH=$GOBIN:$PATH
+        export PATH=./build:$GOBIN:$PATH
         echo "now testing the binary:"
         ./build/jxl help
 
@@ -51,9 +59,28 @@ jobs:
         echo "now lets count words in the secrets yaml"
         wc /tmp/secrets.yaml
 
-        ./build/jxl boot secrets import --git-url https://github.com/jstrachan/environment-kind-dev2 -f /tmp/secrets.yaml
+        export CLUSTER_NAME="kind-${GITHUB_RUN_ID}"
+        export GH_OWNER="jenkins-x-versions-bot-test"
+        export XDG_CONFIG_HOME=$HOME
+
+        mkdir -p $HOME/git
+        echo "${GIT_CREDENTIALS}" > $HOME/git/credentials
+
+
+        # lets setup git
+        git config --global --add user.name JenkinsXBot
+        git config --global --add user.email jenkins-x@googlegroups.com
+
+        echo "creating the dev git repository: https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev"
+        jxl boot create -b --provider=kind --repository=bucketrepo --env-git-owner=$GH_OWNER --cluster=$CLUSTER_NAME --env-git-public  --git-public
+
+        jxl boot secrets import --git-url https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev -f /tmp/secrets.yaml
         rm /tmp/secrets.yaml
 
         echo "now lets boot the cluster"
 
-        ./build/jxl boot run --git-url https://github.com/jstrachan/environment-kind-dev2
+        jxl boot run --git-url https://github.com/$GH_OWNER/environment-$CLUSTER_NAME-dev
+
+        echo "created the following environments:"
+
+        jxl get env

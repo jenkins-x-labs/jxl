@@ -186,6 +186,7 @@ github.com/dlclark/regexp2 v1.2.0/go.mod h1:2pZnwuY/m+8K6iRw6wQdMtk+rH5tNGR1i55k
 github.com/dnaeon/go-vcr v1.0.1 h1:r8L/HqC0Hje5AXMu1ooW8oyQyOFv4GxqpL0nRP7SLLY=
 github.com/dnaeon/go-vcr v1.0.1/go.mod h1:aBB1+wY4s93YsC3HHjMBMrwTj2R9FHDzUr9KyGc8n1E=
 github.com/docker/distribution v0.0.0-20170726174610-edc3ab29cdff/go.mod h1:J2gT2udsDAN96Uj4KfcMRqY0/ypR+oyYUYmja8H+y+w=
+github.com/docker/docker v0.0.0-20171206114025-5e5fadb3c020 h1:aiKCZxnxoraZKXbM2zJj0ZI1n8eamkdK7zNxP7jlbII=
 github.com/docker/docker v0.0.0-20171206114025-5e5fadb3c020/go.mod h1:eEKB0N0r5NX/I1kEveEz05bcu8tLC/8azJZsviup8Sk=
 github.com/docker/go-connections v0.3.0 h1:3lOnM9cSzgGwx8VfK/NGOW5fLQ0GjIlCkaktF+n1M6o=
 github.com/docker/go-connections v0.3.0/go.mod h1:Gbd7IOopHjR8Iph03tsViu4nIes5XhDvyHbTtUxmeec=
@@ -421,8 +422,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nISok6EMoxpDXjQQcVIAGG8PrkX2dA=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
-github.com/jenkins-x-labs/helmboot v0.0.57 h1:YvZJkx6a0xS/fb3+Zlhs8VK6aBhFm9Xa9CmzAB/oEZc=
-github.com/jenkins-x-labs/helmboot v0.0.57/go.mod h1:sLLRFvsSpvv2vKtRfR9i00EE5hy1HleFJ3NYUClM18E=
+github.com/jenkins-x-labs/helmboot v0.0.59 h1:zVFJU5oSp2s0MDonL64KagCvFl3pFylkn9ZH50aXlZY=
+github.com/jenkins-x-labs/helmboot v0.0.59/go.mod h1:PWnsxnrHgdoNM8hF8hkzTospJIgWzFvfXDN/f9bPfv4=
 github.com/jenkins-x-labs/jwizard v0.0.14 h1:m7nZNF7lQvW0HQnYtCy/y8vGN2lryWaefGNfRa8/6c8=
 github.com/jenkins-x-labs/jwizard v0.0.14/go.mod h1:oVJrZZg/uFYlzwTArj1eruXDw5la7LfxmWWISmw45QU=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18 h1:gOFw+XV/lQ/EchHuUpLdGQEKw3K3aQFOWpKQ1fsAt1A=
@@ -437,10 +438,8 @@ github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314 h1:kyBMx/
 github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314/go.mod h1:C6j5HgwlHGjRU27W4XCs6jXksqYFo8OdBu+p44jqQeM=
 github.com/jenkins-x/helm-unit-tester v0.0.6 h1:IurcBXAMcJS0T9oej7JRZ+9P54Au4dlr5f1kHd0nKWc=
 github.com/jenkins-x/helm-unit-tester v0.0.6/go.mod h1:aJarZq7xZD9hTCUQqoxjuq9Blo17tOJ1pISO0+H89ec=
-github.com/jenkins-x/jx v0.0.0-20200310115539-b64ed22fb7af h1:0m9oO/2JTQU3C2FQ62+CLHOm+uUlAuOEiLd/Nh8EAWA=
-github.com/jenkins-x/jx v0.0.0-20200310115539-b64ed22fb7af/go.mod h1:QZVsigjVZ634iK2TqkIs10yANye4JbBF2bHd3i41U8o=
-github.com/jenkins-x/jx v0.0.0-20200310183134-df6d0b1d1c6f h1:xGQWBZcKh6iTX6FhKZTuSwDJszvPx+suR5Yk0Jo+3BY=
-github.com/jenkins-x/jx v0.0.0-20200310183134-df6d0b1d1c6f/go.mod h1:QZVsigjVZ634iK2TqkIs10yANye4JbBF2bHd3i41U8o=
+github.com/jenkins-x/jx v0.0.0-20200311151211-6368378d24bb h1:U3gjeFTEzTEb79ex9rP3I2/eS18CnregBB4Nvu5vSfE=
+github.com/jenkins-x/jx v0.0.0-20200311151211-6368378d24bb/go.mod h1:QZVsigjVZ634iK2TqkIs10yANye4JbBF2bHd3i41U8o=
 github.com/jetstack/cert-manager v0.5.2 h1:qs74mdAprZ5kcCYF3arzmEAZtbt+9HneldSJrk21tKs=
 github.com/jetstack/cert-manager v0.5.2/go.mod h1:nbddmhjWxYGt04bxvwVGUSeLhZ2PCyNvd7MpXdq+yWY=
 github.com/jinzhu/gorm v0.0.0-20170316141641-572d0a0ab1eb/go.mod h1:Vla75njaFJ8clLU1W44h34PjIkijhjHIYnZxMqCdxqo=

@@ -4,12 +4,12 @@ go 1.12
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/jenkins-x-labs/helmboot v0.0.57
+	github.com/jenkins-x-labs/helmboot v0.0.59
 	github.com/jenkins-x-labs/jwizard v0.0.14
 	github.com/jenkins-x-labs/step-go-releaser v0.0.18
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
 	github.com/jenkins-x/helm-unit-tester v0.0.6
-	github.com/jenkins-x/jx v0.0.0-20200310183134-df6d0b1d1c6f
+	github.com/jenkins-x/jx v0.0.0-20200311151211-6368378d24bb
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v0.0.6
 	github.com/stretchr/testify v1.4.0
@@ -39,4 +39,4 @@ replace github.com/banzaicloud/bank-vaults => github.com/banzaicloud/bank-vaults
 
 replace github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
 
-replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200310183134-df6d0b1d1c6f
+replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200311151211-6368378d24bb
