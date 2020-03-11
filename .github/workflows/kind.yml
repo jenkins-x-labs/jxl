@@ -58,9 +58,12 @@ jobs:
         echo "now lets count words in the secrets yaml"
         wc /tmp/secrets.yaml
 
-
         export CLUSTER_NAME="kind-${GITHUB_RUN_ID}"
         export GH_OWNER="jenkins-x-versions-bot-test"
+
+        # lets setup git
+        git config --global --add user.name JenkinsXBot
+        git config --global --add user.email jenkins-x@googlegroups.com
 
         jxl boot create -b --provider=kind --repository=bucketrepo --env-git-owner=$GH_OWNER --cluster=$CLUSTER_NAME --env-git-public  --git-public
 
