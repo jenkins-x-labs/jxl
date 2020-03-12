@@ -39,4 +39,4 @@ replace github.com/banzaicloud/bank-vaults => github.com/banzaicloud/bank-vaults
 
 replace github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
 
-replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200311170907-e6357267efba
+replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200312090951-2167319413e9
