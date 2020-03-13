@@ -3,8 +3,8 @@ dependencies:
   owner: jenkins-x-labs
   repo: helmboot
   url: https://github.com/jenkins-x-labs/helmboot
-  version: 0.0.46
-  versionURL: https://github.com/jenkins-x-labs/helmboot/releases/tag/v0.0.46
+  version: 0.0.61
+  versionURL: https://github.com/jenkins-x-labs/helmboot/releases/tag/v0.0.61
 - host: github.com
   owner: jenkins-x-labs
   repo: jwizard
@@ -21,5 +21,5 @@ dependencies:
   owner: jenkins-x-labs
   repo: jxl-base-image
   url: https://github.com/jenkins-x-labs/jxl-base-image
-  version: 0.1.3
-  versionURL: https://github.com/jenkins-x-labs/jxl-base-image/releases/tag/v0.1.3
+  version: 0.1.8
+  versionURL: https://github.com/jenkins-x-labs/jxl-base-image/releases/tag/v0.1.8
