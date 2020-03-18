@@ -1,0 +1,107 @@
+# Source: jxl-boot/templates/install.yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  labels:
+    release: jenkins-x
+  name: jx-boot
+spec:
+  backoffLimit: 5
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      labels:
+        release: jenkins-x
+    spec:
+      containers:
+      - args:
+        - boot
+        - run
+        - -b
+        - --git-url
+        - "https://github.com/jenkins-x/jenkins-x-boot-helmfile-config.git"
+        - --git-ref
+        - "master"
+        - --versions-repo
+        - "https://github.com/jenkins-x/jenkins-x-versions.git"
+        - --versions-ref
+        - "master"
+        command:
+        - jxl
+
+        env:
+        - name: GIT_COMMITTER_EMAIL
+          value: jenkins-x@googlegroups.com
+        - name: GIT_AUTHOR_EMAIL
+          value: jenkins-x@googlegroups.com
+        - name: GIT_AUTHOR_NAME
+          value: jenkins-x-bot
+        - name: GIT_COMMITTER_NAME
+          value: jenkins-x-bot
+        - name: JX_BATCH_MODE
+          value: "true"
+        - name: JX_LOG_FORMAT
+          value: "json"
+
+        - name: JX_HELM3
+          value: "true"
+        - name: JX_HELMFILE
+          value: "true"
+        - name: JX_SECRETS_YAML
+          value: /secrets/jx-boot/secrets.yaml
+        - name: JX_INTERPRET_PIPELINE
+          value: "true"
+        - name: JX_REQUIREMENT_TERRAFORM
+          value: "true"
+        - name: JX_REQUIREMENT_ENV_GIT_OWNER
+          value: ""
+        - name: JX_REQUIREMENT_KANIKO_SA_NAME
+          value: kaniko-sa
+
+        - name: JX_REQUIREMENT_VELERO_SA_NAME
+          value: velero-sa
+        - name: JX_REQUIREMENT_EXTERNALDNS_SA_NAME
+          value: externaldns-sa
+        - name: JX_REQUIREMENT_INGRESS_TLS_PRODUCTION
+          value: "false"
+        - name: JX_REQUIREMENT_ENV_GIT_PUBLIC
+          value: "false"
+        - name: JX_REQUIREMENT_GIT_PUBLIC
+          value: "false"
+        - name: JX_REQUIREMENT_STORAGE_BACKUP_ENABLED
+          value: "true"
+        - name: JX_REQUIREMENT_PROVIDER
+          value:  "gke"
+        - name: JX_REQUIREMENT_PROJECT
+          value:  
+        - name: JX_REQUIREMENT_CLUSTER_NAME
+          value: 
+        - name: JX_REQUIREMENT_ZONE
+          value: 
+        # - name: JX_REQUIREMENT_STORAGE_BACKUP_URL
+        #   value: ${storage_backup_url}
+        # - name: JX_REQUIREMENT_STORAGE_LOGS_ENABLED
+        #   value: "true"
+        # - name: JX_REQUIREMENT_STORAGE_LOGS_URL
+        #   value: ${storage_logs_url}
+        # - name: JX_REQUIREMENT_STORAGE_REPORTS_ENABLED
+        #   value: "false"
+        # - name: JX_REQUIREMENT_STORAGE_REPOSITORY_ENABLED
+        #   value: "false"
+        - name: USER_EMAIL
+          value: 
+        - name: JX_HOME
+          value: /secrets
+        image: "gcr.io/jenkinsxio-labs/jxl:0.0.88"
+        imagePullPolicy: IfNotPresent
+        name: boot
+        volumeMounts:
+        - mountPath: /secrets/jx-boot
+          name: jx-boot-secrets
+      restartPolicy: Never
+      serviceAccountName: jxl-boot
+      volumes:
+      - name: jx-boot-secrets
+        secret:
+          secretName: jx-boot-secrets
