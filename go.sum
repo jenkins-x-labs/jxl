@@ -424,6 +424,8 @@ github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nI
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
 github.com/jenkins-x-labs/helmboot v0.0.63 h1:fkeAbzfdYUNg1j+beHA3I4W0yjKHBGeDFw2mx7SpqMw=
 github.com/jenkins-x-labs/helmboot v0.0.63/go.mod h1:Jk3/rbuHPBwDXJCv53WVtX4BSc10uVnoGYb2oIZJ7pM=
+github.com/jenkins-x-labs/jwizard v0.0.15 h1:VY0ohUdBpdhZXZjV09E2tBcd3FwU8ZngJg3ZlGa6nuo=
+github.com/jenkins-x-labs/jwizard v0.0.15/go.mod h1:oVJrZZg/uFYlzwTArj1eruXDw5la7LfxmWWISmw45QU=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18 h1:gOFw+XV/lQ/EchHuUpLdGQEKw3K3aQFOWpKQ1fsAt1A=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18/go.mod h1:k/JSZstlZ7X+UX2uTdwjwJvKQc2Yr5yjtSdwJKMze0s=
 github.com/jenkins-x-labs/trigger-pipeline v0.0.4 h1:JvZG2VPB9+VRk8Rqa0dcVPHNc7dVPuCldUDp0UnTKH0=
