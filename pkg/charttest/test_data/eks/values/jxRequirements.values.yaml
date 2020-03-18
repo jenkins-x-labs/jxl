@@ -11,14 +11,15 @@ secrets:
 
 serviceAccount:
   create: true
-  annotations:
-    something: else
   name: jxl-boot
+  annotations:
+    foo: bar
+    eks.amazonaws.com/role-arn: arn:aws:iam::123456:role/jenkinsXaccessToS3
 
 jxRequirements:
   cluster:
     clusterName: mycluster
     namespace: jx
     project: myproject
-    provider: gke
+    provider: eks
     zone: europe-west1-c
