@@ -11,4 +11,5 @@ metadata:
     app.kubernetes.io/version: "0.0.88"
     app.kubernetes.io/managed-by: Helm
   annotations:
+    something: else
     iam.gke.io/gcp-service-account: "mycluster-jb@myproject.iam.gserviceaccount.com"
