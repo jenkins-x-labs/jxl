@@ -22,3 +22,8 @@ See [how to download jxl](https://jenkins-x.io/docs/labs/jxl/)
 ## Issues
 
 To raise an issue see the [Jenkins X Labs issue tracker](https://github.com/jenkins-x-labs/issues/issues)
+
+
+---
+
+Made with :heart: by the Jenkins X Team.
