@@ -23,12 +23,12 @@ type EditOptions struct {
 }
 
 var (
-	exit_long = templates.LongDesc(`
+	editLong = templates.LongDesc(`
 		Edit a resource
 
 `)
 
-	exit_example = templates.Examples(`
+	editExample = templates.Examples(`
 		# Lets edit the staging Environment
 		jx edit env staging
 	`)
@@ -43,15 +43,15 @@ func NewCmdEdit(commonOpts *opts.CommonOptions) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "edit [flags]",
 		Short:   "Edit a resource",
-		Long:    exit_long,
-		Example: exit_example,
+		Long:    editLong,
+		Example: editExample,
 		Run: func(cmd *cobra.Command, args []string) {
 			options.Cmd = cmd
 			options.Args = args
 			err := options.Run()
 			helper.CheckErr(err)
 		},
-		SuggestFor: []string{"modify"},
+		SuggestFor: []string{"modify", "change"},
 	}
 
 	cmd.AddCommand(jxedit.NewCmdEditBuildpack(commonOpts))
