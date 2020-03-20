@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/jenkins-x-labs/helmboot/pkg/cmd/verify"
+	"github.com/jenkins-x-labs/jxl/cmd/root/edit"
 	"github.com/jenkins-x-labs/jxl/cmd/root/get"
 	"github.com/jenkins-x-labs/jxl/cmd/root/start"
 	"github.com/jenkins-x-labs/jxl/cmd/root/step"
@@ -84,6 +85,7 @@ func init() {
 	rootCmd.AddCommand(jxcmd.NewCmdRepo(commonOptions))
 	rootCmd.AddCommand(jxcmd.NewCmdShell(commonOptions))
 
+	rootCmd.AddCommand(edit.NewCmdEdit(commonOptions))
 	rootCmd.AddCommand(get.NewCmdGet(commonOptions))
 	rootCmd.AddCommand(namespace.NewCmdNamespace(commonOptions))
 	rootCmd.AddCommand(preview.NewCmdPreview(commonOptions))

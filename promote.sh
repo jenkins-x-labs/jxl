@@ -15,3 +15,9 @@ jx step create pr regex \
     --files packages/jxl.yml \
     --files charts/jx-labs/jxl-boot.yml \
     --repo https://github.com/jenkins-x-labs/jenkins-x-versions.git
+
+jx step create pr regex \
+    --regex 'JX_DEFAULT_IMAGE: gcr.io/jenkinsxio-labs/jxl:(.*)' \
+    --version ${VERSION} \
+    --files apps/jenkins-x/lighthouse/values.yaml.gotmpl \
+    --repo https://github.com/jenkins-x-labs/jenkins-x-versions.git
