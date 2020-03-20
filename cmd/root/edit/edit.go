@@ -17,8 +17,8 @@ import (
 	"github.com/jenkins-x/jx/pkg/util"
 )
 
-// EditOptions contains the CLI options
-type EditOptions struct {
+// Options contains the CLI options
+type Options struct {
 	*opts.CommonOptions
 }
 
@@ -36,7 +36,7 @@ var (
 
 // NewCmdEdit creates the edit command
 func NewCmdEdit(commonOpts *opts.CommonOptions) *cobra.Command {
-	options := &EditOptions{
+	options := &Options{
 		commonOpts,
 	}
 
@@ -65,11 +65,11 @@ func NewCmdEdit(commonOpts *opts.CommonOptions) *cobra.Command {
 }
 
 // Run implements this command
-func (o *EditOptions) Run() error {
+func (o *Options) Run() error {
 	return o.Cmd.Help()
 }
 
-func addTeamSettingsCommandsFromTags(baseCmd *cobra.Command, options *EditOptions) error {
+func addTeamSettingsCommandsFromTags(baseCmd *cobra.Command, options *Options) error {
 	teamSettings := &v1.TeamSettings{}
 	value := reflect.ValueOf(teamSettings).Elem()
 	t := value.Type()
