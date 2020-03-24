@@ -15,22 +15,6 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: jxl-boot
 
-boot:
-  clusterName:
-  bootGitURL: https://github.com/jenkins-x/jenkins-x-boot-helmfile-config.git
-  bootGitRef: master
-  environmentGitOwner:
-  userEmail:
-  projectID:
-  publicEnvironmentGit: false
-  publicGit: false
-  provider: gke
-  tls:
-    production: no
-  zone:
-  versionsGitURL: https://github.com/jenkins-x/jenkins-x-versions.git
-  versionsGitRef: master
-
 secrets:
   helmboot:
     enabled: true
@@ -39,18 +23,31 @@ secrets:
   env:
     enabled: false
     adminUser:
-      username:
-      password:
-    hmacToken:
+      username: ""
+      password: ""
+    hmacToken: ""
     pipelineUser:
-      username:
-      email:
-      token:
+      username: ""
+      email: ""
+      token: ""
 
 jxRequirements:
+  bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-helmfile-config.git
+  bootConfigRef: master
   cluster:
-    clustername: ""
+    clusterName: ""
     namespace: ""
     project: ""
     provider: ""
+  ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  versionStream:
+    ref: "master"
+    url: https://github.com/jenkins-x-labs/jenkins-x-versions.git
 

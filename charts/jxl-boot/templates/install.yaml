@@ -19,13 +19,13 @@ spec:
         - run
         - -b
         - --git-url
-        - {{ .Values.boot.bootGitURL | quote }}
+        - {{ .Values.jxRequirements.bootConfigURL | quote }}
         - --git-ref
-        - {{ .Values.boot.bootGitRef | quote }}
+        - {{ .Values.jxRequirements.bootConfigRef | quote }}
         - --versions-repo
-        - {{ .Values.boot.versionsGitURL | quote }}
+        - {{ .Values.jxRequirements.versionStream.url | quote }}
         - --versions-ref
-        - {{ .Values.boot.versionsGitRef | quote }}
+        - {{ .Values.jxRequirements.versionStream.ref | quote }}
         command:
         - jxl
 
@@ -51,45 +51,6 @@ spec:
           value: /secrets/jx-boot/secrets.yaml
         - name: JX_INTERPRET_PIPELINE
           value: "true"
-        - name: JX_REQUIREMENT_TERRAFORM
-          value: "true"
-        - name: JX_REQUIREMENT_ENV_GIT_OWNER
-          value: "{{ .Values.boot.environmentGitOwner }}"
-        - name: JX_REQUIREMENT_KANIKO_SA_NAME
-          value: kaniko-sa
-
-        - name: JX_REQUIREMENT_VELERO_SA_NAME
-          value: velero-sa
-        - name: JX_REQUIREMENT_EXTERNALDNS_SA_NAME
-          value: externaldns-sa
-        - name: JX_REQUIREMENT_INGRESS_TLS_PRODUCTION
-          value: {{ .Values.boot.tls.production | quote }}
-        - name: JX_REQUIREMENT_ENV_GIT_PUBLIC
-          value: {{ .Values.boot.publicEnvironmentGit | quote }}
-        - name: JX_REQUIREMENT_GIT_PUBLIC
-          value: {{ .Values.boot.publicGit | quote }}
-        - name: JX_REQUIREMENT_STORAGE_BACKUP_ENABLED
-          value: "true"
-        - name: JX_REQUIREMENT_PROVIDER
-          value:  {{ .Values.boot.provider | quote }}
-        - name: JX_REQUIREMENT_PROJECT
-          value:  {{ .Values.boot.projectID | quote }}
-        - name: JX_REQUIREMENT_CLUSTER_NAME
-          value: {{ .Values.boot.clusterName | quote }}
-        - name: JX_REQUIREMENT_ZONE
-          value: {{ .Values.boot.zone | quote }}
-        # - name: JX_REQUIREMENT_STORAGE_BACKUP_URL
-        #   value: ${storage_backup_url}
-        # - name: JX_REQUIREMENT_STORAGE_LOGS_ENABLED
-        #   value: "true"
-        # - name: JX_REQUIREMENT_STORAGE_LOGS_URL
-        #   value: ${storage_logs_url}
-        # - name: JX_REQUIREMENT_STORAGE_REPORTS_ENABLED
-        #   value: "false"
-        # - name: JX_REQUIREMENT_STORAGE_REPOSITORY_ENABLED
-        #   value: "false"
-        - name: USER_EMAIL
-          value: {{ .Values.boot.userEmail | quote }}
         - name: JX_HOME
           value: /secrets
         image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
