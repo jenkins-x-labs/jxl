@@ -142,8 +142,8 @@ github.com/chromedp/cdproto v0.0.0-20180720050708-57cf4773008d h1:u/5pA/xuVl0+OE
 github.com/chromedp/cdproto v0.0.0-20180720050708-57cf4773008d/go.mod h1:C2GPAraqdt1KfZU7aSmx1XUgarNq/3JmxevQkmCjOVs=
 github.com/chromedp/chromedp v0.1.1 h1:sQjIfUy8Ey55VmxUHEgYI9kPxf5Z37/dZHm8LLX/I9I=
 github.com/chromedp/chromedp v0.1.1/go.mod h1:KKKRCns4HLd/N5oQR+vX13dV/U7U3+QeWFW0vupkJKk=
-github.com/cli/cli v0.6.1 h1:8gyM6MBRdjL+rWBXktZe27KOzCVmBssd30JLoQtd+8A=
-github.com/cli/cli v0.6.1/go.mod h1:aIe+WLswDbBU9Qgbfh3xY9QSjOMU+9GoucwZ622jHn8=
+github.com/cli/cli v0.6.2 h1:aCXn8R/vStITKsJNvcR6IlI2/K0cgZink27YeeSp/IM=
+github.com/cli/cli v0.6.2/go.mod h1:aIe+WLswDbBU9Qgbfh3xY9QSjOMU+9GoucwZ622jHn8=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/cockroachdb/cmux v0.0.0-20170110192607-30d10be49292/go.mod h1:qRiX68mZX1lGBkTWyp3CLcenw9I94W2dLeRvMzcn9N4=
 github.com/codahale/hdrhistogram v0.0.0-20161010025455-3a0bb77429bd/go.mod h1:sE/e/2PUdi/liOCUjSTXgM1o87ZssimdTWN964YiIeI=
@@ -422,8 +422,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nISok6EMoxpDXjQQcVIAGG8PrkX2dA=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
-github.com/jenkins-x-labs/helmboot v0.0.63 h1:fkeAbzfdYUNg1j+beHA3I4W0yjKHBGeDFw2mx7SpqMw=
-github.com/jenkins-x-labs/helmboot v0.0.63/go.mod h1:Jk3/rbuHPBwDXJCv53WVtX4BSc10uVnoGYb2oIZJ7pM=
+github.com/jenkins-x-labs/helmboot v0.0.65 h1:AkPcMgZzst5jGdWD5EMVrdvlyUCRgjbUawejxYADDz8=
+github.com/jenkins-x-labs/helmboot v0.0.65/go.mod h1:wSBZ5dWbar1y2pv5G5gNYBRDf1yV7LB590WGo08Rblw=
 github.com/jenkins-x-labs/jwizard v0.0.15 h1:VY0ohUdBpdhZXZjV09E2tBcd3FwU8ZngJg3ZlGa6nuo=
 github.com/jenkins-x-labs/jwizard v0.0.15/go.mod h1:oVJrZZg/uFYlzwTArj1eruXDw5la7LfxmWWISmw45QU=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18 h1:gOFw+XV/lQ/EchHuUpLdGQEKw3K3aQFOWpKQ1fsAt1A=
