@@ -89,8 +89,8 @@ github.com/andygrunwald/go-jira v1.5.0 h1:/1CyYLNdwus7TvB/DHyD3udb52K12aYL9m7WaG
 github.com/andygrunwald/go-jira v1.5.0/go.mod h1:yNYQrX3nGSrVdcVsM2mWz2pm7tTeDtYfRyVEkc3VUiY=
 github.com/anmitsu/go-shlex v0.0.0-20161002113705-648efa622239 h1:kFOfPq6dUM1hTo4JG6LR5AXSUEsOjtdm0kw0FtQtMJA=
 github.com/anmitsu/go-shlex v0.0.0-20161002113705-648efa622239/go.mod h1:2FmKhYUyUczH0OGQWaF5ceTx0UBShxjsH6f8oGKYe2c=
-github.com/antchfx/xpath v0.0.0-20170515025933-1f3266e77307 h1:C735MoY/X+UOx6SECmHk5pVOj51h839Ph13pEoY8UmU=
-github.com/antchfx/xpath v0.0.0-20170515025933-1f3266e77307/go.mod h1:Yee4kTMuNiPYJ7nSNorELQMr1J33uOpXDMByNYhvtNk=
+github.com/antchfx/xpath v1.1.4 h1:naPIpjBGeT3eX0Vw7E8iyHsY8FGt6EbGdkcd8EZCo+g=
+github.com/antchfx/xpath v1.1.4/go.mod h1:Yee4kTMuNiPYJ7nSNorELQMr1J33uOpXDMByNYhvtNk=
 github.com/antham/chyle v1.4.0 h1:RBCXpnmj3Wcl43bKbcuRU3LXkarhYwSigWAPUyWEjvY=
 github.com/antham/chyle v1.4.0/go.mod h1:D94Z4aE/ECudyNoTHwkhqu77mjGPZtfPG8dNoeIG9CU=
 github.com/antham/envh v1.2.0/go.mod h1:ocIRPHuwwjyBVBtuUJOJc2TYzGg+d23xSAZexl4y9hQ=
@@ -440,8 +440,8 @@ github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314 h1:kyBMx/
 github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314/go.mod h1:C6j5HgwlHGjRU27W4XCs6jXksqYFo8OdBu+p44jqQeM=
 github.com/jenkins-x/helm-unit-tester v0.0.6 h1:IurcBXAMcJS0T9oej7JRZ+9P54Au4dlr5f1kHd0nKWc=
 github.com/jenkins-x/helm-unit-tester v0.0.6/go.mod h1:aJarZq7xZD9hTCUQqoxjuq9Blo17tOJ1pISO0+H89ec=
-github.com/jenkins-x/jx v0.0.0-20200325132114-593acb61c8f4 h1:MBrCZ0epa3yYq+cfc3UwDJTnskQunizn773kOlxLJ+4=
-github.com/jenkins-x/jx v0.0.0-20200325132114-593acb61c8f4/go.mod h1:IcMMCqFsFfK7CkDYkJ0+CsDCysDK946QpIcHDOicggA=
+github.com/jenkins-x/jx v0.0.0-20200325162203-4d64987229ce h1:MhtmVPuqRyDddOAzZ5CzP/bTHHpOqR5qWp5w3EMJ1cs=
+github.com/jenkins-x/jx v0.0.0-20200325162203-4d64987229ce/go.mod h1:nZmmcSr0p0SEIT76NYTUIZqNlWCIGI+UZpzf4h0HYHg=
 github.com/jetstack/cert-manager v0.5.2 h1:qs74mdAprZ5kcCYF3arzmEAZtbt+9HneldSJrk21tKs=
 github.com/jetstack/cert-manager v0.5.2/go.mod h1:nbddmhjWxYGt04bxvwVGUSeLhZ2PCyNvd7MpXdq+yWY=
 github.com/jinzhu/gorm v0.0.0-20170316141641-572d0a0ab1eb/go.mod h1:Vla75njaFJ8clLU1W44h34PjIkijhjHIYnZxMqCdxqo=
@@ -729,8 +729,8 @@ github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXf
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0 h1:2E4SXV/wtOkTonXsotYi4li6zVWxYlZuYNCXe9XRJyk=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
-github.com/subchen/go-xmldom v1.1.2 h1:7evI2YqfYYOnuj+PBwyaOZZYjl3iWq35P6KfBUw9jeU=
-github.com/subchen/go-xmldom v1.1.2/go.mod h1:6Pg/HuX5/T4Jlj0IPJF1sRxKVoI/rrKP6LIMge9d5/8=
+github.com/subchen/go-xmldom v1.1.2-0.20171223153236-c38add8757d0 h1:h/3vMjKBY+Ln8wMqmBQFlCZQTbaCS1QHWFHv4et0Nqk=
+github.com/subchen/go-xmldom v1.1.2-0.20171223153236-c38add8757d0/go.mod h1:8A4AGzWTeqT0N46dqNTO9cJT1PSQUaEpdlsRZPyXwoc=
 github.com/subosito/gotenv v1.2.0 h1:Slr1R9HxAlEKefgq5jn9U+DnETlIUa6HfgEzj0g5d7s=
 github.com/subosito/gotenv v1.2.0/go.mod h1:N0PQaV/YGNqwC0u51sEeR/aUtSLEXKX9iv69rRypqCw=
 github.com/tektoncd/pipeline v0.8.0 h1:jWEF93SRnvpihdWupwLxMpcyzhD7ogiZAE9GSK1tFno=
