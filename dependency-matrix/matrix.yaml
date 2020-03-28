@@ -3,8 +3,8 @@ dependencies:
   owner: jenkins-x-labs
   repo: helmboot
   url: https://github.com/jenkins-x-labs/helmboot
-  version: 0.0.68
-  versionURL: https://github.com/jenkins-x-labs/helmboot/releases/tag/v0.0.61
+  version: 0.0.71
+  versionURL: https://github.com/jenkins-x-labs/helmboot/releases/tag/v0.0.71
 - host: github.com
   owner: jenkins-x-labs
   repo: jwizard
