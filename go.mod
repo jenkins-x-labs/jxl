@@ -9,7 +9,7 @@ require (
 	github.com/jenkins-x-labs/step-go-releaser v0.0.18
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
 	github.com/jenkins-x/helm-unit-tester v0.0.6
-	github.com/jenkins-x/jx v0.0.0-20200330075242-6ae6b9362471
+	github.com/jenkins-x/jx v0.0.0-20200330115723-6eea554439b1
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v0.0.6
 	github.com/stretchr/testify v1.4.0
@@ -39,4 +39,4 @@ replace github.com/banzaicloud/bank-vaults => github.com/banzaicloud/bank-vaults
 
 replace github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
 
-replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200330075242-6ae6b9362471
+replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200330115723-6eea554439b1
