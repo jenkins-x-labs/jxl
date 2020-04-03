@@ -430,6 +430,8 @@ github.com/jenkins-x-labs/helmboot v0.0.75 h1:330lRfSq5fYgS719vZSNeE79oMxxYx1VuQ
 github.com/jenkins-x-labs/helmboot v0.0.75/go.mod h1:GbbEtwpWxR0FBWgo90XEU5daJqvi3puGeJaJbJ5AM+w=
 github.com/jenkins-x-labs/helmboot v0.0.76 h1:Cwrlnv23J/767oUTGdUYGVMqf3zA9QQxysrFOTb0vrM=
 github.com/jenkins-x-labs/helmboot v0.0.76/go.mod h1:8rOMWcIzWS7T4Xf4yaIw69RXuTDvQlJZty+oKoJQZSk=
+github.com/jenkins-x-labs/helmboot v0.0.78 h1:ela51TZHhz8X1izwDENMP6DjtwDpuB4TxUJ8TX6XRHw=
+github.com/jenkins-x-labs/helmboot v0.0.78/go.mod h1:yAL1B2ff4L//oK3Yf1a4jMbjcq+JGtDcB/d7nvgQ+Go=
 github.com/jenkins-x-labs/jwizard v0.0.15 h1:VY0ohUdBpdhZXZjV09E2tBcd3FwU8ZngJg3ZlGa6nuo=
 github.com/jenkins-x-labs/jwizard v0.0.15/go.mod h1:oVJrZZg/uFYlzwTArj1eruXDw5la7LfxmWWISmw45QU=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18 h1:gOFw+XV/lQ/EchHuUpLdGQEKw3K3aQFOWpKQ1fsAt1A=
