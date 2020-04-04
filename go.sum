@@ -425,8 +425,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nISok6EMoxpDXjQQcVIAGG8PrkX2dA=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
-github.com/jenkins-x-labs/helmboot v0.0.80 h1:3o5Gaur80r7CgnBYW5Xph8S8XrDEyJv95NgrzG37+dM=
-github.com/jenkins-x-labs/helmboot v0.0.80/go.mod h1:yAL1B2ff4L//oK3Yf1a4jMbjcq+JGtDcB/d7nvgQ+Go=
+github.com/jenkins-x-labs/helmboot v0.0.81 h1:/jfzzQ5rHIBSC/w/+gQf7hv2IDknlpp4OVG7NWyjXpI=
+github.com/jenkins-x-labs/helmboot v0.0.81/go.mod h1:xTaUlzE5YsartYydULHB8dEhzEpNds1PHRcMbtkyv1o=
 github.com/jenkins-x-labs/jwizard v0.0.15 h1:VY0ohUdBpdhZXZjV09E2tBcd3FwU8ZngJg3ZlGa6nuo=
 github.com/jenkins-x-labs/jwizard v0.0.15/go.mod h1:oVJrZZg/uFYlzwTArj1eruXDw5la7LfxmWWISmw45QU=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18 h1:gOFw+XV/lQ/EchHuUpLdGQEKw3K3aQFOWpKQ1fsAt1A=
@@ -441,8 +441,8 @@ github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314 h1:kyBMx/
 github.com/jenkins-x/golang-jenkins v0.0.0-20180919102630-65b83ad42314/go.mod h1:C6j5HgwlHGjRU27W4XCs6jXksqYFo8OdBu+p44jqQeM=
 github.com/jenkins-x/helm-unit-tester v0.0.6 h1:IurcBXAMcJS0T9oej7JRZ+9P54Au4dlr5f1kHd0nKWc=
 github.com/jenkins-x/helm-unit-tester v0.0.6/go.mod h1:aJarZq7xZD9hTCUQqoxjuq9Blo17tOJ1pISO0+H89ec=
-github.com/jenkins-x/jx v0.0.0-20200330115723-6eea554439b1 h1:8pMyPHpQSab8JHuAmJA8RjZxwP5veyCf5ouvv62xiio=
-github.com/jenkins-x/jx v0.0.0-20200330115723-6eea554439b1/go.mod h1:nZmmcSr0p0SEIT76NYTUIZqNlWCIGI+UZpzf4h0HYHg=
+github.com/jenkins-x/jx v0.0.0-20200404075548-a31565a97e14 h1:f/WDrlENqWfqt93u1NNPczdLIK8BOf176zoDtZwN5Oc=
+github.com/jenkins-x/jx v0.0.0-20200404075548-a31565a97e14/go.mod h1:vxbWjM7FtYFr9lyEjjSkxcfQVHmBxbhNReJCiir1k9A=
 github.com/jetstack/cert-manager v0.5.2 h1:qs74mdAprZ5kcCYF3arzmEAZtbt+9HneldSJrk21tKs=
 github.com/jetstack/cert-manager v0.5.2/go.mod h1:nbddmhjWxYGt04bxvwVGUSeLhZ2PCyNvd7MpXdq+yWY=
 github.com/jinzhu/gorm v0.0.0-20170316141641-572d0a0ab1eb/go.mod h1:Vla75njaFJ8clLU1W44h34PjIkijhjHIYnZxMqCdxqo=
