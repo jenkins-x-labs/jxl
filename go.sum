@@ -274,6 +274,7 @@ github.com/go-sql-driver/mysql v1.4.0/go.mod h1:zAC/RDZ24gD3HViQzih4MyKcchzm+sOG
 github.com/go-sql-driver/mysql v1.4.1/go.mod h1:zAC/RDZ24gD3HViQzih4MyKcchzm+sOG5ZlKdlhCg5w=
 github.com/go-stack/stack v1.8.0 h1:5SgMzNM5HxrEjV0ww2lTmX6E2Izsfxas4+YHWRs3Lsk=
 github.com/go-stack/stack v1.8.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/melR3HDY=
+github.com/go-yaml/yaml v2.1.0+incompatible h1:RYi2hDdss1u4YE7GwixGzWwVo47T8UQwnTLB6vQiq+o=
 github.com/go-yaml/yaml v2.1.0+incompatible/go.mod h1:w2MrLa16VYP0jy6N7M5kHaCkaLENm+P+Tv+MfurjSw0=
 github.com/gobuffalo/envy v1.6.5/go.mod h1:N+GkhhZ/93bGZc6ZKhJLP6+m+tCNPKwgSpH9kaifseQ=
 github.com/gobwas/glob v0.2.3 h1:A4xDbljILXROh+kObIiy5kIaPYD8e96x1tgBhUI5J+Y=
@@ -424,14 +425,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nISok6EMoxpDXjQQcVIAGG8PrkX2dA=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
-github.com/jenkins-x-labs/helmboot v0.0.72 h1:RkvAcjyGLw8pHr94MDxA25kIZtslfAwGkTIt8b3mW7M=
-github.com/jenkins-x-labs/helmboot v0.0.72/go.mod h1:29v+gFNHgkww2g05IoNL7N3QXRL0x7oJ4v9BLNBWb7k=
-github.com/jenkins-x-labs/helmboot v0.0.75 h1:330lRfSq5fYgS719vZSNeE79oMxxYx1VuQNUfTkkfmM=
-github.com/jenkins-x-labs/helmboot v0.0.75/go.mod h1:GbbEtwpWxR0FBWgo90XEU5daJqvi3puGeJaJbJ5AM+w=
-github.com/jenkins-x-labs/helmboot v0.0.76 h1:Cwrlnv23J/767oUTGdUYGVMqf3zA9QQxysrFOTb0vrM=
-github.com/jenkins-x-labs/helmboot v0.0.76/go.mod h1:8rOMWcIzWS7T4Xf4yaIw69RXuTDvQlJZty+oKoJQZSk=
-github.com/jenkins-x-labs/helmboot v0.0.78 h1:ela51TZHhz8X1izwDENMP6DjtwDpuB4TxUJ8TX6XRHw=
-github.com/jenkins-x-labs/helmboot v0.0.78/go.mod h1:yAL1B2ff4L//oK3Yf1a4jMbjcq+JGtDcB/d7nvgQ+Go=
+github.com/jenkins-x-labs/helmboot v0.0.80 h1:3o5Gaur80r7CgnBYW5Xph8S8XrDEyJv95NgrzG37+dM=
+github.com/jenkins-x-labs/helmboot v0.0.80/go.mod h1:yAL1B2ff4L//oK3Yf1a4jMbjcq+JGtDcB/d7nvgQ+Go=
 github.com/jenkins-x-labs/jwizard v0.0.15 h1:VY0ohUdBpdhZXZjV09E2tBcd3FwU8ZngJg3ZlGa6nuo=
 github.com/jenkins-x-labs/jwizard v0.0.15/go.mod h1:oVJrZZg/uFYlzwTArj1eruXDw5la7LfxmWWISmw45QU=
 github.com/jenkins-x-labs/step-go-releaser v0.0.18 h1:gOFw+XV/lQ/EchHuUpLdGQEKw3K3aQFOWpKQ1fsAt1A=
