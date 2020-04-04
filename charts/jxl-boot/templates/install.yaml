@@ -56,17 +56,5 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: boot
-        volumeMounts:
-        - mountPath: /secrets/jx-boot
-          name: jx-boot-secrets
       restartPolicy: Never
       serviceAccountName: {{ include "jxl-boot.serviceAccountName" . }}
-      volumes:
-      - name: jx-boot-secrets
-        secret:
-          secretName: jx-boot-secrets
-      {{- if .Values.secrets.env.enabled }}
-      - name: config-volume
-        configMap:
-          name: boot-secrets-template
-      {{- end }}
