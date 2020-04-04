@@ -425,6 +425,8 @@ github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOl
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c h1:jqLMOnuwp+ac6nISok6EMoxpDXjQQcVIAGG8PrkX2dA=
 github.com/jbrukh/bayesian v0.0.0-20161210175230-bf3f261f9a9c/go.mod h1:SELxwZQq/mPnfPCR2mchLmT4TQaPJvYtLcCtDWSM7vM=
+github.com/jenkins-x-labs/helmboot v0.0.79 h1:Ow75Gc0axtSm2L6f4mY4ETI2Djk3ubXZj5d7gJ7sqpw=
+github.com/jenkins-x-labs/helmboot v0.0.79/go.mod h1:yAL1B2ff4L//oK3Yf1a4jMbjcq+JGtDcB/d7nvgQ+Go=
 github.com/jenkins-x-labs/helmboot v0.0.80 h1:3o5Gaur80r7CgnBYW5Xph8S8XrDEyJv95NgrzG37+dM=
 github.com/jenkins-x-labs/helmboot v0.0.80/go.mod h1:yAL1B2ff4L//oK3Yf1a4jMbjcq+JGtDcB/d7nvgQ+Go=
 github.com/jenkins-x-labs/jwizard v0.0.15 h1:VY0ohUdBpdhZXZjV09E2tBcd3FwU8ZngJg3ZlGa6nuo=
