@@ -13,3 +13,4 @@ metadata:
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::123456:role/jenkinsXaccessToS3
     foo: bar
+    eks.amazonaws.com/role-arn: arn:aws:iam::myproject:role/mycluster-jx-jxl-boot
