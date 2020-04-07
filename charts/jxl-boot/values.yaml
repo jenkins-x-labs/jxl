@@ -4,7 +4,7 @@
 
 image:
   repository: gcr.io/jenkinsxio-labs/jxl
-  tag: ""
+  tag: 0.0.181
   pullPolicy: IfNotPresent
 
 serviceAccount:
