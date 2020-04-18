@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 
 image:
-  repository: gcr.io/jenkinsxio-labs/jxlabs-nos-jxl
-  tag: 0.0.183
+  repository: docker.packages.nuxeo.com/jxlabs-nos-jxl/jxl
+  tag: 0.0.183-dev_ad3bc0e
   pullPolicy: IfNotPresent
 
 serviceAccount:
