@@ -1,5 +1,9 @@
 # jx-labs
 
+**NOTE: This current experiment is now closed. The work done and feedback we have received will be used to enhance Jenkins X in future versions**
+
+**This code should not be used in production, or be adopted for usage. It should only be used to provide feedback to the Labs team.**
+
 [![Documentation](https://godoc.org/github.com/jenkins-x-labs/jxl?status.svg)](https://pkg.go.dev/mod/github.com/jenkins-x-labs/jxl)
 [![Go Report Card](https://goreportcard.com/badge/github.com/jenkins-x-labs/jxl)](https://goreportcard.com/report/github.com/jenkins-x-labs/jxl)
 [![Releases](https://img.shields.io/github/release-pre/jenkins-x-labs/jxl.svg)](https://github.com/jenkins-x-labs/jxl/releases)
