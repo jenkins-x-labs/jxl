@@ -6,7 +6,7 @@ require (
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/jenkins-x-labs/helmboot v0.0.90
 	github.com/jenkins-x-labs/jwizard v0.0.15
-	github.com/jenkins-x-labs/step-go-releaser v0.0.18
+	github.com/jenkins-x-labs/step-go-releaser v0.0.5
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
 	github.com/jenkins-x/helm-unit-tester v0.0.6
 	github.com/jenkins-x/jx v0.0.0-20200407063749-f19676961cb7
