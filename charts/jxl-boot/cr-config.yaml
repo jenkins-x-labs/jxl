@@ -1,0 +1,7 @@
+owner: nxmatic
+git-repo: jxlabs-nos-jxl
+package-path: .cr-release-packages
+git-base-url: https://api.github.com/
+git-upload-url: https://uploads.github.com/
+charts-repo: https://nxmatic.github.io/jxlabs-nos-jxl/
+index-path: .cr-index

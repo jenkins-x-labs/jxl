@@ -4,7 +4,7 @@
 
 image:
   repository: docker.packages.nuxeo.com/jxlabs-nos-jxl/jxl
-  tag: 0.0.183-dev_ad3bc0e
+  tag: 0.0.183-jxlabs-nos
   pullPolicy: IfNotPresent
 
 serviceAccount:
