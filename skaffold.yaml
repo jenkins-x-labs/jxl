@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: cbjx-zebramad/jx-labs
+  - image: jxl
     context: .
     docker: {}
   tagPolicy:
