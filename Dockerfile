@@ -1,4 +1,4 @@
-FROM gcr.io/jenkinsxio-labs/jxl-base:0.1.41
+FROM gcr.io/jxlabs-nos/build-jx-prod/jxlabs-nos/jxl-base:0.1.41-jxlabs-nos-1
 EXPOSE 8080
 
 COPY ./build/linux/jxl /usr/local/bin/jxl

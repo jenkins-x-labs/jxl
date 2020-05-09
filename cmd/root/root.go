@@ -28,6 +28,7 @@ import (
 	"github.com/jenkins-x-labs/jwizard/pkg/cmd/create"
 	tp "github.com/jenkins-x-labs/trigger-pipeline/pkg/cmd"
 	tpcommon "github.com/jenkins-x-labs/trigger-pipeline/pkg/common"
+	helmfilePatch "github.com/nxmatic/jxlabs-nos-helmfile-patch/pkg/cmd"
 	"github.com/spf13/cobra"
 )
 
@@ -68,6 +69,9 @@ func init() {
 	jenkinsCmd := tp.NewCmd()
 	jenkinsCmd.Use = "jenkins"
 	rootCmd.AddCommand(jenkinsCmd)
+
+	helmfilePatchCmd := helmfilePatch.NewCmd(commonOptions)
+	rootCmd.AddCommand(helmfilePatchCmd)
 
 	jwcommon.TopLevelCommand = "project"
 	jwcommon.BinaryName = "jxl project"

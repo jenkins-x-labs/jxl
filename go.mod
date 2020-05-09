@@ -10,10 +10,13 @@ require (
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
 	github.com/jenkins-x/helm-unit-tester v0.0.6
 	github.com/jenkins-x/jx v0.0.0-20200407063749-f19676961cb7
+	github.com/nxmatic/jxlabs-nos-helmfile-patch v0.0.0-20200509213531-c08336fb4748
 	github.com/pkg/errors v0.9.1
-	github.com/spf13/cobra v0.0.6
+	github.com/spf13/cobra v1.0.0
 	github.com/stretchr/testify v1.4.0
 )
+
+replace github.com/jenkins-x/jx => ../jxlabs-nos-jx
 
 replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
 
@@ -38,5 +41,3 @@ replace github.com/Azure/go-autorest => github.com/Azure/go-autorest v10.14.0+in
 replace github.com/banzaicloud/bank-vaults => github.com/banzaicloud/bank-vaults v0.0.0-20190508130850-5673d28c46bd
 
 replace github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
-
-replace github.com/jenkins-x/jx => github.com/jenkins-x/jx v0.0.0-20200407063749-f19676961cb7
