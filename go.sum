@@ -233,6 +233,7 @@ github.com/evanphx/json-patch v4.0.0+incompatible/go.mod h1:50XU6AFN0ol/bzJsmQLi
 github.com/evanphx/json-patch v4.1.0+incompatible/go.mod h1:50XU6AFN0ol/bzJsmQLiYLvXMP4fmwYFNcr97nuDLSk=
 github.com/evanphx/json-patch v4.5.0+incompatible h1:ouOWdg56aJriqS0huScTkVXPC5IcNrDCXZ6OoTAWu7M=
 github.com/evanphx/json-patch v4.5.0+incompatible/go.mod h1:50XU6AFN0ol/bzJsmQLiYLvXMP4fmwYFNcr97nuDLSk=
+github.com/evanphx/json-patch/v5 v5.0.0 h1:dKTrUeykyQwKb/kx7Z+4ukDs6l+4L41HqG1XHnhX7WE=
 github.com/evanphx/json-patch/v5 v5.0.0/go.mod h1:G79N1coSVB93tBe7j6PhzjmR3/2VvlbKOFpnXhI9Bw4=
 github.com/fatih/color v1.5.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
 github.com/fatih/color v1.7.0 h1:DkWD4oS2D8LGGgTQ6IvwJJXSL5Vp2ffcQg58nFV38Ys=
@@ -615,6 +616,8 @@ github.com/nxmatic/jxlabs-nos-helmfile-patch v0.0.0-20200509143422-04d04fd2da9d 
 github.com/nxmatic/jxlabs-nos-helmfile-patch v0.0.0-20200509143422-04d04fd2da9d/go.mod h1:X1iyDr+aVmvqSOhZwtKyv07y94P9PWsRUJLzZ8nVTic=
 github.com/nxmatic/jxlabs-nos-helmfile-patch v0.0.0-20200509213531-c08336fb4748 h1:SGg7DSMrWRmGfV9KKTj0yl5KUKdKlkf/HL/467DUYhI=
 github.com/nxmatic/jxlabs-nos-helmfile-patch v0.0.0-20200509213531-c08336fb4748/go.mod h1:X1iyDr+aVmvqSOhZwtKyv07y94P9PWsRUJLzZ8nVTic=
+github.com/nxmatic/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0 h1:ArUdsIBW6vSkCaYT7ks0j3Cm5cG06nsGwzerbjDDxAU=
+github.com/nxmatic/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0/go.mod h1:dMUw5aJ5km/5kr6cAE0mpKZ0StUeh9cweUUFWMjKfbw=
 github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn4U=
 github.com/olekukonko/tablewriter v0.0.0-20170122224234-a0225b3f23b5/go.mod h1:vsDQFd/mU46D+Z4whnwzcISnGGzXWMclvtLoiIKAKIo=
 github.com/olekukonko/tablewriter v0.0.4/go.mod h1:zq6QwlOf5SlnkVbMSr5EoBv3636FWnp+qbPhuoO21uA=
@@ -752,6 +755,7 @@ github.com/spf13/cobra v0.0.5 h1:f0B+LkLX6DtmRH1isoNA9VTtNUK9K8xYd28JNNfOv/s=
 github.com/spf13/cobra v0.0.5/go.mod h1:3K3wKZymM7VvHMDS9+Akkh4K60UwM26emMESw8tLCHU=
 github.com/spf13/cobra v0.0.6 h1:breEStsVwemnKh2/s6gMvSdMEkwW0sK8vGStnlVBMCs=
 github.com/spf13/cobra v0.0.6/go.mod h1:/6GTrnGXV9HjY+aR4k0oJ5tcvakLuG6EuKReYlHNrgE=
+github.com/spf13/cobra v1.0.0 h1:6m/oheQuQ13N9ks4hubMG6BnvwOeaJrqSPLahSnczz8=
 github.com/spf13/cobra v1.0.0/go.mod h1:/6GTrnGXV9HjY+aR4k0oJ5tcvakLuG6EuKReYlHNrgE=
 github.com/spf13/jwalterweatherman v1.0.0 h1:XHEdyB+EcvlqZamSM4ZOMGlc93t6AcsBEu9Gc1vn7yk=
 github.com/spf13/jwalterweatherman v1.0.0/go.mod h1:cQK4TGJAtQXfYWX+Ddv3mKDzgVb68N+wFjFa4jdeBTo=

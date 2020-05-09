@@ -16,7 +16,7 @@ require (
 	github.com/stretchr/testify v1.4.0
 )
 
-replace github.com/jenkins-x/jx => ../jxlabs-nos-jx
+replace github.com/jenkins-x/jx => github.com/nxmatic/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0
 
 replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
 
