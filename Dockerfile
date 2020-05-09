@@ -1,4 +1,4 @@
-FROM golang:1.12.17
+FROM golang:1.14.2
 
 RUN mkdir /out
 RUN mkdir -p /go/src/github.com/jenkins-x-labs
@@ -9,7 +9,7 @@ RUN git clone https://github.com/nxmatic/jxlabs-nos-jxl.git jxl && \
   cd jxl && \
   git checkout jxlabs-nos && \
   make linux && \
-  mv build/linux/jxl; /out/jxl
+  mv build/linux/jxl /out/jxl
 
 FROM gcr.io/build-jx-prod/jxlabs-nos/jxl-base:0.1.41-jxlabs-nos-1
 EXPOSE 8080
