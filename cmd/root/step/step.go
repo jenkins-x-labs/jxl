@@ -21,7 +21,7 @@ import (
 	"github.com/jenkins-x/jx/pkg/cmd/step/syntax"
 	"github.com/jenkins-x/jx/pkg/cmd/step/update"
 	"github.com/jenkins-x/jx/pkg/cmd/step/verify"
-	helmfilePatch "github.com/nxmatic/jxlabs-nos-helmfile-patch/pkg/cmd"
+	helmfilePatch "github.com/nxmatic/jxlabs-nos-yaml-patch/pkg/cmd"
 	"github.com/spf13/cobra"
 )
 

@@ -28,7 +28,7 @@ import (
 	"github.com/jenkins-x-labs/jwizard/pkg/cmd/create"
 	tp "github.com/jenkins-x-labs/trigger-pipeline/pkg/cmd"
 	tpcommon "github.com/jenkins-x-labs/trigger-pipeline/pkg/common"
-	helmfilePatch "github.com/nxmatic/jxlabs-nos-helmfile-patch/pkg/cmd"
+	helmfilePatch "github.com/nxmatic/jxlabs-nos-yaml-patch/pkg/cmd"
 	"github.com/spf13/cobra"
 )
 
