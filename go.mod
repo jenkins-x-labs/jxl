@@ -10,7 +10,7 @@ require (
 	github.com/jenkins-x-labs/trigger-pipeline v0.0.4
 	github.com/jenkins-x/helm-unit-tester v0.0.6
 	github.com/jenkins-x/jx v0.0.0-20200407063749-f19676961cb7
-	github.com/nxmatic/jxlabs-nos-yaml-patch v0.0.2
+	github.com/nxmatic/jxlabs-nos-yaml-patch v0.0.3
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.0.0
 	github.com/stretchr/testify v1.4.0
