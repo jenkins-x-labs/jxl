@@ -3,21 +3,21 @@
 echo "promoting the new version ${VERSION} to downstream repositories"
 
 jx step create pr regex \
-    --regex '\s+image: gcr.io/jenkinsxio-labs/jxl:(.*)' \
+    --regex '\s+image: gcr.io/jxlabs-nos/jxl:(.*)' \
     --version ${VERSION} \
     --files "jenkins-x-*.yml" \
-    --repo https://github.com/jenkins-x-labs/jenkins-x-versions.git
+    --repo https://github.com/nuxeo/jxlabs-nos-versions.git
 
 jx step create pr regex \
     --regex 'version: (.*)' \
     --version ${VERSION} \
-    --files docker/gcr.io/jenkinsxio-labs/jxl.yml \
+    --files docker/gcr.io/jxlabs-nos/jxl.yml \
     --files packages/jxl.yml \
     --files charts/jx-labs/jxl-boot.yml \
-    --repo https://github.com/jenkins-x-labs/jenkins-x-versions.git
+    --repo https://github.com/nuxeo/jxlabs-nos-versions.git
 
 jx step create pr regex \
-    --regex 'JX_DEFAULT_IMAGE: gcr.io/jenkinsxio-labs/jxl:(.*)' \
+    --regex 'JX_DEFAULT_IMAGE: gcr.io/jxlabs-nos/jxl:(.*)' \
     --version ${VERSION} \
     --files apps/jenkins-x/lighthouse/values.yaml.gotmpl \
-    --repo https://github.com/jenkins-x-labs/jenkins-x-versions.git
+    --repo https://github.com/nuxeo/jxlabs-nos-versions.git

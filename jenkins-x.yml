@@ -1,51 +1,52 @@
 buildPack: go-cli
-dockerRegistryOwner: jenkinsxio-labs
+dockerRegistryHost: gcr.io/build-jx-prod/jxlabs-nos-master
+dockerRegistryOwner: nuxeo
 pipelineConfig:
   pipelines:
     overrides:
-      - name: container-build
-        volumes:
-          - name: gcr-sa
-            secret:
-              secretName: gcr-sa
-        containerOptions:
-          env:
-            - name: GCP_SA
-              value: /secrets/gcr/credentials.json
-          volumeMounts:
-            - name: gcr-sa
-              mountPath: /secrets/gcr
-        step:
-          sh: ./build.sh
+    - name: next-version
+      step:
+        sh: echo \$(jx-release-version)-jxlabs-nos > VERSION
     release:
       pipeline:
         stages:
           - agent:
               image: gcr.io/jenkinsxio/builder-go
             name: chart
+            environment:
+              - name: GOOGLE_APPLICATION_CREDENTIALS
+                value: /secrets/kaniko/kaniko-secret.json
             options:
               volumes:
+                - name: kaniko-secret
+                  secret:
+                    secretName: kaniko-secret
+                    items:
+                      - key: kaniko-secret
+                        path: kaniko/kaniko-secret.json
                 - name: chart-sa
                   secret:
                     secretName: chart-sa
                     items:
                       - key: credentials.json
                         path: credentials.json
-                - name: gcr-sa
-                  secret:
-                    secretName: gcr-sa
-                    items:
-                      - key: credentials.json
-                        path: credentials.json
               containerOptions:
                 volumeMounts:
-                  - name: gcr-sa
-                    mountPath: /secrets/gcr
+                  - name: kaniko-secret
+                    mountPath: /secrets
                   - name: chart-sa
                     mountPath: /secrets/charts
+                resources:
+                  limits:
+                    cpu: 4
+                    memory: 8Gi
+                  requests:
+                    cpu: 1
+                    memory: 3072Mi
             steps:
-              - name: build-and-push-image
-                command: ./build.sh
+              - sh: /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=gcr.io/build-jx-prod/jxlabs-nos/jxl:$VERSION
+                name: container-build
+                image: gcr.io/kaniko-project/executor
 
               - name: release-chart
                 command: make release

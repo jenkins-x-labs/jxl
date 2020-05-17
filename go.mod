@@ -4,6 +4,7 @@ go 1.12
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
+	github.com/go-delve/delve v1.4.0 // indirect
 	github.com/jenkins-x-labs/helmboot v0.0.90
 	github.com/jenkins-x-labs/jwizard v0.0.15
 	github.com/jenkins-x-labs/step-go-releaser v0.0.18
@@ -16,7 +17,7 @@ require (
 	github.com/stretchr/testify v1.4.0
 )
 
-replace github.com/jenkins-x/jx => github.com/nxmatic/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0
+replace github.com/jenkins-x/jx => github.com/nuxeo/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0
 
 replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0
 
