@@ -17,6 +17,8 @@ require (
 	github.com/stretchr/testify v1.4.0
 )
 
+replace code.gitea.io/sdk => github.com/go-gitea/go-sdk v0.0.0-20180702024448-79a281c4e34a
+
 replace github.com/jenkins-x/jx => github.com/nuxeo/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0
 
 replace github.com/coreos/go-systemd => github.com/coreos/go-systemd/v22 v22.0.0

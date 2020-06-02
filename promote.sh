@@ -2,6 +2,8 @@
 
 echo "promoting the new version ${VERSION} to downstream repositories"
 
+exit 0 # do nothing for now
+
 jx step create pr regex \
     --regex '\s+image: gcr.io/jxlabs-nos/jxl:(.*)' \
     --version ${VERSION} \
