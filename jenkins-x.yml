@@ -6,7 +6,7 @@ pipelineConfig:
     overrides:
     - name: next-version
       step:
-        sh: echo \$(jx-release-version)-jxlabs-nos > VERSION
+        sh: ./next-version.sh
     release:
       pipeline:
         stages:
@@ -44,7 +44,7 @@ pipelineConfig:
                     cpu: 1
                     memory: 3072Mi
             steps:
-              - sh: /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=gcr.io/build-jx-prod/jxlabs-nos/jxl:$VERSION
+              - sh: /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=gcr.io/build-jx-prod/jxlabs-nos/jxl:$VERSION --destination=gcr.io/build-jx-prod/jxlabs-nos/jxl:latest
                 name: container-build
                 image: gcr.io/kaniko-project/executor
 

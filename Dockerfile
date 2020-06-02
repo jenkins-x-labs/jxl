@@ -7,7 +7,6 @@ WORKDIR /go/src/github.com/jenkins-x-labs
 
 RUN git clone https://github.com/nxmatic/jxlabs-nos-jxl.git jxl && \
   cd jxl && \
-  git checkout jxlabs-nos && \
   make linux && \
   mv build/linux/jxl /out/jxl
 

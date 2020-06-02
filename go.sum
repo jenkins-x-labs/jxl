@@ -617,6 +617,8 @@ github.com/nbio/st v0.0.0-20140626010706-e9e8d9816f32 h1:W6apQkHrMkS0Muv8G/TipAy
 github.com/nbio/st v0.0.0-20140626010706-e9e8d9816f32/go.mod h1:9wM+0iRr9ahx58uYLpLIr5fm8diHn0JbqRycJi6w0Ms=
 github.com/nlopes/slack v0.0.0-20180721202243-347a74b1ea30 h1:VFJCzi0gMjfS+UmnSoP+sW4KzVw9V++txUHRWgw3hEo=
 github.com/nlopes/slack v0.0.0-20180721202243-347a74b1ea30/go.mod h1:jVI4BBK3lSktibKahxBF74txcK2vyvkza1z/+rRnVAM=
+github.com/nuxeo/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0 h1:dY7Spe2Dm+ckkXlWEgXhU9Zygx+dJlnw5MpsyvAavZU=
+github.com/nuxeo/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0/go.mod h1:dMUw5aJ5km/5kr6cAE0mpKZ0StUeh9cweUUFWMjKfbw=
 github.com/nwaples/rardecode v1.0.0 h1:r7vGuS5akxOnR4JQSkko62RJ1ReCMXxQRPtxsiFMBOs=
 github.com/nwaples/rardecode v1.0.0/go.mod h1:5DzqNKiOdpKKBH87u8VlvAnPZMXcGRhxWkRpHbbfGS0=
 github.com/nxmatic/jxlabs-nos-jx v1.3.981-0.20200509145424-6d90ddbd0bf0 h1:ArUdsIBW6vSkCaYT7ks0j3Cm5cG06nsGwzerbjDDxAU=
