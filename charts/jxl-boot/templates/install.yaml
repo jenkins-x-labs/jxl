@@ -13,11 +13,6 @@ spec:
       labels:
         release: jenkins-x
     spec:
-      volumes:
-      - name: jx-boot-secrets
-        secret:
-          defaultMode: 420
-          secretName: jx-boot-secrets
       containers:
       - args:
         - boot
@@ -33,9 +28,7 @@ spec:
         - {{ .Values.jxRequirements.versionStream.ref | quote }}
         command:
         - jxl
-        volumeMounts:
-        - mountPath: /secrets/jx-boot
-          name: jx-boot-secrets
+
         env:
         - name: GIT_COMMITTER_EMAIL
           value: jenkins-x@googlegroups.com
