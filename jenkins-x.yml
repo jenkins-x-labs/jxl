@@ -7,6 +7,9 @@ pipelineConfig:
     - name: next-version
       step:
         sh: ./next-version.sh
+    - name: tag-version
+      step:
+        sh: jx step tag --charts-value-repository=gcr.io/build-jx-prod/jxlabs-nos/jxl-boot --version=\$(cat VERSION)
     release:
       pipeline:
         stages:
