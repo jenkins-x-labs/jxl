@@ -10,8 +10,13 @@ RUN git clone https://github.com/nxmatic/jxlabs-nos-jxl.git jxl && \
   make linux && \
   mv build/linux/jxl /out/jxl
 
-FROM gcr.io/build-jx-prod/jxlabs-nos/jxl-base:latest
+# jenkins-x
+ENV JX_VERSION 2.1.56-jxlabs-nos-3
+RUN curl --silent -f -L https://github.com/nuxeo/jxlabs-nos-jx/releases/download/v${JX_VERSION}/jxlabs-nos-jx-linux-amd64.tar.gz | tar xvfCz - /out jx && \
+  chmod +x /out/jx
+
+FROM gcr.io/build-jx-prod/jxlabs-nos/jxl-base:0.1.41-jxlabs-nos-4
 EXPOSE 8080
 
-COPY --from=0 /out/jxl /usr/local/bin/jxl
+COPY --from=0 /out /usr/local/bin
 
