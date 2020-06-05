@@ -3,16 +3,18 @@ set -x
 $(git rev-parse --is-shallow-repository) && git fetch --unshallow
 git fetch origin --tags
 
-up=$(expr $(git describe --abbrev=0 --match='v[0-9]*.[0-9]*.[0-9]*[!-]*') : 'v\(.*\)')
-last=$(git describe --abbrev=0 --tags --match="${up}-jxlabs-nos-*" 2>/dev/null)
+upstream=$(expr $(git describe --abbrev=0 --match='v[0-9]*.[0-9]*.[0-9]*[!-]*') : 'v\(.*\)')
+tag=$(git describe --abbrev=0 --tags --match="t${upstream}-jxlabs-nos-*" 2>/dev/null)
 if [ $? -eq 0 ] ; then
-  next=$(expr $(expr $last : "${up}-jxlabs-nos-\(.*\)") + 1)
+  last=$(expr $tag : "t${upstream}-jxlabs-nos-\(.*\)")
 else
-  next=1
+  last=0
 fi
-version=${up}-jxlabs-nos-${next}
+next=$(expr $last + 1)
+version=${upstream}-jxlabs-nos-${next}
 
-git tag ${version}
-git push origin ${version}
+git tag t$version
+git push origin t$version
 
 echo $version > VERSION
+
