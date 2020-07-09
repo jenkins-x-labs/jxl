@@ -6,7 +6,7 @@ pipelineConfig:
     overrides:
     - name: next-version
       step:
-        sh: ./next-version.sh
+        sh: jx step next-version --git-tag-only
     - name: tag-version
       step:
         sh: jx step tag --charts-value-repository=gcr.io/build-jx-prod/jxlabs-nos/jxl-boot --version=\$(cat VERSION)
@@ -47,7 +47,7 @@ pipelineConfig:
                     cpu: 1
                     memory: 3072Mi
             steps:
-              - sh: /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=gcr.io/build-jx-prod/jxlabs-nos/jxl:$VERSION --destination=gcr.io/build-jx-prod/jxlabs-nos/jxl:latest
+              - sh: /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION 
                 name: container-build
                 image: gcr.io/kaniko-project/executor
 
