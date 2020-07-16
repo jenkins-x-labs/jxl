@@ -135,7 +135,7 @@ release: clean test linux
 
 .PHONY: goreleaser
 goreleaser:
-	step-go-releaser --organisation=$(ORG) --revision=$(REV) --branch=$(BRANCH) --build-date=$(BUILD_DATE) --go-version=$(GO_VERSION) --root-package=$(ROOT_PACKAGE) --version=$(VERSION)
+	GITHUB_TOKEN=$(GITHUB_ACCESS_TOKEN) REV=$(REV) BRANCH=$(BRANCH) BUILDDATE=$(BUILD_DATE) GOVERSION=$(GO_VERSION) ROOTPACKAGE=$(ROOT_PACKAGE) VERSION=$(VERSION) goreleaser release --config=.goreleaser.yml --rm-dist
 
 .PHONY: clean
 clean: ## Clean the generated artifacts

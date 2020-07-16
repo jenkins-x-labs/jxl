@@ -4,7 +4,7 @@ import (
 	"github.com/blang/semver"
 	"github.com/pkg/errors"
 
-	"github.com/jenkins-x/jx/pkg/versionstream"
+	"github.com/jenkins-x/jx/v2/pkg/versionstream"
 )
 
 // GetJXLVersion returns the jxl version from the version stream

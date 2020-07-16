@@ -8,9 +8,9 @@ import (
 
 	"github.com/blang/semver"
 	"github.com/jenkins-x-labs/jxl/pkg/cmd/upgrade"
-	"github.com/jenkins-x/jx/pkg/cmd/opts"
-	"github.com/jenkins-x/jx/pkg/log"
-	"github.com/jenkins-x/jx/pkg/version"
+	"github.com/jenkins-x/jx/v2/pkg/cmd/opts"
+	"github.com/jenkins-x/jx-logging/pkg/log"
+	"github.com/jenkins-x/jx/v2/pkg/version"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/jenkins-x/helm-unit-tester/pkg"
-	"github.com/jenkins-x/jx/pkg/util"
+	"github.com/jenkins-x/jx/v2/pkg/util"
 )
 
 func TestChartsWithDifferentValues(t *testing.T) {
