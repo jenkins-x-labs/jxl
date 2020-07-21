@@ -940,6 +940,8 @@ github.com/nuxeo/jxlabs-nos-step-go-releaser v0.0.1 h1:d03auitttptdIhbezupqNJnEA
 github.com/nuxeo/jxlabs-nos-step-go-releaser v0.0.1/go.mod h1:L6u+m8fDGTYpX9RAwC4rP75Qatz6dxKtJOxhu/nAsWw=
 github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.0.9 h1:DF/CBvJw6hS06JohqmnBsafRF8q/nzwSTt6DOMcg/3c=
 github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.0.9/go.mod h1:/eYLWD7BPtjXQr6TPMhz2Z60JZ9ZEccRsajx+lOebJQ=
+github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.0.10 h1:Ll+Fim7V5n+4Z9q/Pe0DCLGJhUxsP8cHu4B/yu3haZ0=
+github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.0.10/go.mod h1:/eYLWD7BPtjXQr6TPMhz2Z60JZ9ZEccRsajx+lOebJQ=
 github.com/nuxeo/jxlabs-nos-yaml-patch v0.0.5 h1:yM6JhlOoJiRof1gdU9vwC1YAthDwH3zXVPH/eUrdjGc=
 github.com/nuxeo/jxlabs-nos-yaml-patch v0.0.5/go.mod h1:HR/+dDJscETD+myZhS0Zro6T7eMY+IpaPLwWNctionI=
 github.com/nwaples/rardecode v1.0.0/go.mod h1:5DzqNKiOdpKKBH87u8VlvAnPZMXcGRhxWkRpHbbfGS0=
