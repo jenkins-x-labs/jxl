@@ -23,3 +23,9 @@ dependencies:
   url: https://github.com/jenkins-x-labs/jxl-base-image
   version: 0.1.40
   versionURL: https://github.com/jenkins-x-labs/jxl-base-image/releases/tag/v0.1.40
+- host: github.com
+  owner: nuxeo
+  repo: jxlabs-nos-trigger-pipeline
+  url: https://github.com/nuxeo/jxlabs-nos-trigger-pipeline
+  version: 0.0.10
+  versionURL: https://github.com/nuxeo/jxlabs-nos-trigger-pipeline/releases/tag/v0.0.10
