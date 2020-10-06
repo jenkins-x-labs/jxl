@@ -4,7 +4,6 @@ go 1.13
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
-	github.com/go-delve/delve v1.4.0 // indirect
 	github.com/jenkins-x-labs/helmboot v0.0.90
 	github.com/jenkins-x-labs/jwizard v0.0.15
 	github.com/jenkins-x-labs/step-go-releaser v0.0.18
@@ -19,13 +18,13 @@ require (
 	github.com/stretchr/testify v1.6.1
 )
 
-replace github.com/jenkins-x-labs/helmboot => github.com/nuxeo/jxlabs-nos-helmboot v0.0.3
+replace github.com/jenkins-x-labs/helmboot => github.com/nuxeo/jxlabs-nos-helmboot v0.0.90-4-6e578c51-master
 
-replace github.com/jenkins-x-labs/jwizard => github.com/nuxeo/jxlabs-nos-jwizard v0.0.8
+replace github.com/jenkins-x-labs/jwizard => github.com/nuxeo/jxlabs-nos-jwizard v0.0.18-2-b1f769a4-master
 
-replace github.com/jenkins-x-labs/step-go-releaser => github.com/nuxeo/jxlabs-nos-step-go-releaser v0.0.1
+replace github.com/jenkins-x-labs/step-go-releaser => github.com/nuxeo/jxlabs-nos-step-go-releaser v1.13.15-2-37f2a611-master
 
-replace github.com/jenkins-x-labs/trigger-pipeline => github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.0.25
+replace github.com/jenkins-x-labs/trigger-pipeline => github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.1.0-3-0b73ab82-master
 
 replace github.com/jenkins-x/jx/v2 => github.com/nuxeo/jxlabs-nos-jx/v2 v2.1.1
 
