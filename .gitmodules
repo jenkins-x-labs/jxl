@@ -1,0 +1,3 @@
+[submodule "make.d"]
+	path = make.d
+	url = https://github.com/nuxeo/jx-nos-make.d

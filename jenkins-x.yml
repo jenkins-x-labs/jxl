@@ -1,86 +1,91 @@
+---
 buildPack: go-cli
 pipelineConfig:
   pipelines:
     release:
-      pipeline:
-        stages:
-        - name: chart
-          agent:
-            image: gcr.io/jenkinsxio/builder-go
-          environment:
-          - name: GOOGLE_APPLICATION_CREDENTIALS
-            value: /secrets/kaniko/kaniko-secret.json
-          - name: GITHUB_ACCESS_TOKEN
-            valueFrom:
-              secretKeyRef:
-                key: password
-                name: knative-git-user-pass
-          - name: DOCKER_REGISTRY
-            valueFrom:
-              configMapKeyRef:
-                key: docker.registry
-                name: jenkins-x-docker-registry
-          - name: DOCKER_REGISTRY_ORG
-            valueFrom:
-              configMapKeyRef:
-                key: docker.org
-                name: jenkins-x-docker-registry
-          options:
-            containerOptions:
-              name: ""
-              resources:
-                limits:
-                  cpu: "4"
-                  memory: 8Gi
-                requests:
-                  cpu: "1"
-                  memory: 3Gi
-              volumeMounts:
-              - mountPath: /secrets
-                name: kaniko-secret
-              - mountPath: /secrets/charts
-                name: chart-sa
-            volumes:
-            - name: kaniko-secret
-              secret:
-                items:
-                - key: kaniko-secret
-                  path: kaniko/kaniko-secret.json
-                secretName: kaniko-secret
-            - name: chart-sa
-              secret:
-                items:
-                - key: credentials.json
-                  path: credentials.json
-                secretName: chart-sa
-          steps:
-          - command: make release
-            name: release-binary
-          - name: fetch-tags
-            sh: git fetch --tags
-          - command: make goreleaser
-            name: upload-binaries
-          - image: gcr.io/kaniko-project/executor
-            name: container-build
-            sh: /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source
-              --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/jxl:$VERSION
-          - command: make release
-            dir: /workspace/source/charts/jxl-boot
-            env:
-            - name: GOOGLE_APPLICATION_CREDENTIALS
-              value: /secrets/charts/credentials.json
-            image: gcr.io/jenkinsxio-labs/helm:0.0.21
-            name: release-chart
-          - command: ./promote.sh
-            dir: /workspace/source
-            image: gcr.io/jenkinsxio/builder-go
-            name: promote-release
       setVersion:
         replace: true
         steps:
-        - comment: so we can retrieve the version in later steps
-          name: next-version
-          sh: jx step next-version --use-git-tag-only
-        - name: tag-version
-          sh: jx step tag --charts-value-repository=$DOCKER_REGISTRY/$DOCKER_REGISTRY_HOST/jxl
-            --version=\$(cat VERSION)
+          - name: git-unshallow
+            sh: git fetch --quiet --unshallow
+          - name: git-fetch-tags
+            sh: git fetch --quiet
+          - name: create-version-file
+            sh: jx step next-version --version=\$(make version)
+          - name: tag-version
+            sh: jx step tag --version=\$(cat VERSION)
+              --charts-value-repository=$DOCKER_REGISTRY/$DOCKER_REGISTRY_HOST/jxl
+      pipeline:
+        stages:
+          - name: chart
+            agent:
+              image: gcr.io/jenkinsxio/builder-go
+            environment:
+              - name: GOOGLE_APPLICATION_CREDENTIALS
+                value: /secrets/kaniko/kaniko-secret.json
+              - name: GITHUB_ACCESS_TOKEN
+                valueFrom:
+                  secretKeyRef:
+                    key: password
+                    name: knative-git-user-pass
+              - name: DOCKER_REGISTRY
+                valueFrom:
+                  configMapKeyRef:
+                    key: docker.registry
+                    name: jenkins-x-docker-registry
+              - name: DOCKER_REGISTRY_ORG
+                valueFrom:
+                  configMapKeyRef:
+                    key: docker.org
+                    name: jenkins-x-docker-registry
+            options:
+              containerOptions:
+                name: ""
+                resources:
+                  limits:
+                    cpu: "4"
+                    memory: 8Gi
+                  requests:
+                    cpu: "1"
+                    memory: 3Gi
+                volumeMounts:
+                  - mountPath: /secrets
+                    name: kaniko-secret
+                  - mountPath: /secrets/charts
+                    name: chart-sa
+              volumes:
+                - name: kaniko-secret
+                  secret:
+                    items:
+                      - key: kaniko-secret
+                        path: kaniko/kaniko-secret.json
+                    secretName: kaniko-secret
+                - name: chart-sa
+                  secret:
+                    items:
+                      - key: credentials.json
+                        path: credentials.json
+                    secretName: chart-sa
+            steps:
+              - command: make release
+                name: release-binary
+              - name: fetch-tags
+                sh: git fetch --quiet
+              - command: make goreleaser
+                name: upload-binaries
+              - image: gcr.io/kaniko-project/executor
+                name: container-build
+                sh: /kaniko/executor --cache=true --cache-dir=/workspace
+                  --context=/workspace/source --dockerfile=/workspace/source/Dockerfile
+                  --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/jxl:$VERSION
+              - command: make release
+                dir: /workspace/source/charts/jxl-boot
+                env:
+                  - name: GOOGLE_APPLICATION_CREDENTIALS
+                    value: /secrets/charts/credentials.json
+                image: gcr.io/jenkinsxio-labs/helm:0.0.21
+                name: release-chart
+              - command: ./promote.sh
+                dir: /workspace/source
+                image: gcr.io/jenkinsxio/builder-go
+                name: promote-release

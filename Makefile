@@ -1,3 +1,5 @@
+include make.d/workspace.mk
+
 # Make does not offer a recursive wildcard function, so here's one:
 rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2))
 
@@ -15,7 +17,7 @@ ROOT_PACKAGE := github.com/$(ORG_REPO)
 GO_VERSION := $(shell $(GO) version | sed -e 's/^[^0-9.]*\([0-9.]*\).*/\1/')
 GO_DEPENDENCIES := $(call rwildcard,pkg/,*.go) $(call rwildcard,cmd/jx-labs/,*.go)
 
-BRANCH     := $(shell git rev-parse --abbrev-ref HEAD 2> /dev/null  || echo 'unknown')
+BRANCH     := $(version-branch)
 BUILD_DATE := $(shell date +%Y%m%d-%H:%M:%S)
 CGO_ENABLED = 0
 
@@ -24,10 +26,7 @@ REPORTS_DIR=$(BUILD_TARGET)/reports
 GOTEST := $(GO) test
 
 # set dev version unless VERSION is explicitly set via environment
-VERSION ?= $(shell echo "$$(git for-each-ref refs/tags/ --count=1 --sort=-version:refname --format='%(refname:short)' 2>/dev/null)-dev+$(REV)" | sed 's/^v//')
-
-version:
-	@echo $(VERSION)
+VERSION ?= $(version-tag)
 
 # Build flags for setting build-specific configuration at build time - defaults to empty
 #BUILD_TIME_CONFIG_FLAGS ?= ""
@@ -70,8 +69,6 @@ list: ## List all make targets
 
 .PHONY: help
 .DEFAULT_GOAL := help
-help:
-	@grep -h -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 full: check ## Build and run the tests
 check: build test ## Build and run the tests
