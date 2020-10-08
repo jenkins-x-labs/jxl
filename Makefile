@@ -132,6 +132,7 @@ release: clean test linux
 
 .PHONY: goreleaser
 goreleaser:
+	git diff --quiet || ( git status --short && git diff && exit 1)
 	GITHUB_TOKEN=$(GITHUB_ACCESS_TOKEN) REV=$(REV) BRANCH=$(BRANCH) BUILDDATE=$(BUILD_DATE) GOVERSION=$(GO_VERSION) ROOTPACKAGE=$(ROOT_PACKAGE) VERSION=$(VERSION) goreleaser release --config=.goreleaser.yml --rm-dist
 
 .PHONY: clean
