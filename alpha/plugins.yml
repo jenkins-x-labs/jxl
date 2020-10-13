@@ -9,7 +9,7 @@
       goarch: amd64
       goos: windows
   name: helmboot
-  version: "v0.0.90-4-6e578c51-master"
+  version: "0.0.84"
   subCommand: boot
   description: "commands for booting up a Jenkins X cluster via GitOps"
 - binaries:
@@ -23,7 +23,7 @@
       goarch: amd64
       goos: windows
   name: tp
-  version: "v0.1.0-4-516670ee-master"
+  version: "0.1.0-4-516670ee-master"
   subCommand: jenkins
   description: "commands for triggering pipelines in remote Jenkins servers"
 - binaries:
@@ -37,7 +37,7 @@
       goarch: amd64
       goos: windows
   name: jwizard
-  version: "v0.0.18-2-b1f769a4-master"
+  version: "0.0.12"
   subCommand: project
   description: "commands for creating quickstarts and importing projects"
 
