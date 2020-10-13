@@ -24,7 +24,7 @@ replace github.com/jenkins-x-labs/jwizard => github.com/nuxeo/jxlabs-nos-jwizard
 
 replace github.com/jenkins-x-labs/step-go-releaser => github.com/nuxeo/jxlabs-nos-step-go-releaser v1.13.15-2-37f2a611-master
 
-replace github.com/jenkins-x-labs/trigger-pipeline => github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.1.0-3-0b73ab82-master
+replace github.com/jenkins-x-labs/trigger-pipeline => github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.1.0-4-516670ee-master
 
 replace github.com/jenkins-x/jx/v2 => github.com/nuxeo/jxlabs-nos-jx/v2 v2.1.1
 
