@@ -1008,8 +1008,8 @@ github.com/nuxeo/jxlabs-nos-jx/v2 v2.1.1 h1:yT/Q2n/zBBEJiscDGiKIw8qpGdfpiMqEzEhD
 github.com/nuxeo/jxlabs-nos-jx/v2 v2.1.1/go.mod h1:EIff7XZWuvLI7d1XfWEaD4xLo8qXFBCZk/AtYuc2BZU=
 github.com/nuxeo/jxlabs-nos-step-go-releaser v1.13.15-2-37f2a611-master h1:LAg0UQpruxsHqSxVNhcVd37WTQlyH0u5haU2U+kuYcg=
 github.com/nuxeo/jxlabs-nos-step-go-releaser v1.13.15-2-37f2a611-master/go.mod h1:L6u+m8fDGTYpX9RAwC4rP75Qatz6dxKtJOxhu/nAsWw=
-github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.1.0-3-0b73ab82-master h1:VBLAW0jPqY6TPNdeejVXYU5nwUWIbtGgVPnAS4x2MJU=
-github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.1.0-3-0b73ab82-master/go.mod h1:m15aCMbVF3mlopLaF8aiwonLXj2uyJ641En40fECQuo=
+github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.1.0-4-516670ee-master h1:wHlt4em65O/jnpqV7tpt+7388aQd0sYrox7s6eUxtBE=
+github.com/nuxeo/jxlabs-nos-trigger-pipeline v0.1.0-4-516670ee-master/go.mod h1:m15aCMbVF3mlopLaF8aiwonLXj2uyJ641En40fECQuo=
 github.com/nuxeo/jxlabs-nos-yaml-patch v0.0.5 h1:yM6JhlOoJiRof1gdU9vwC1YAthDwH3zXVPH/eUrdjGc=
 github.com/nuxeo/jxlabs-nos-yaml-patch v0.0.5/go.mod h1:HR/+dDJscETD+myZhS0Zro6T7eMY+IpaPLwWNctionI=
 github.com/nwaples/rardecode v1.0.0/go.mod h1:5DzqNKiOdpKKBH87u8VlvAnPZMXcGRhxWkRpHbbfGS0=
