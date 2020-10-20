@@ -1,4 +1,4 @@
-FROM gcr.io/build-jx-prod/jxlabs-nos-master/jxlabs-nos-jxl-base-image:0.0.4
+FROM gcr.io/build-jx-prod/jxlabs-nos-master/jxlabs-nos-jxl-base-image:0.0.6
 EXPOSE 8080
 
 ENV JX_VERSION 2.1.51-2-d9832b17-master
